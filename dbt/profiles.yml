@@ -1,0 +1,8 @@
+ontario_grid:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: data/warehouse.duckdb
+      schema: analytics
+      threads: 1

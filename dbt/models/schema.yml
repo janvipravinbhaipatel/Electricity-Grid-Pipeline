@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_demand
+    description: Hourly Ontario demand, deduplicated, with UTC timestamps
+    columns:
+      - name: hour_start_utc
+        tests:
+          - unique
+          - not_null
+      - name: ontario_demand_mw
+        tests:
+          - not_null
+
+  - name: stg_weather
+    columns:
+      - name: time_utc
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_hourly
+    description: One row per hour, demand plus temperature. Build charts from this.
+    columns:
+      - name: hour_start_utc
+        tests:
+          - unique
+          - not_null
