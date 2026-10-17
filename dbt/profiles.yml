@@ -1,4 +1,4 @@
-ontario_grid:
+﻿ontario_grid:
   target: dev
   outputs:
     dev:
@@ -6,3 +6,4 @@ ontario_grid:
       path: data/warehouse.duckdb
       schema: analytics
       threads: 1
+

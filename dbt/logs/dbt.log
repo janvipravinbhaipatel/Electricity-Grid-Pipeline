@@ -2550,3 +2550,1213 @@ having count(*) > 1
 [0m15:58:22.166819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001906AF3F6B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001906ABE67B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019064B809D0>]}
 [0m15:58:22.167333 [debug] [MainThread]: Flushing usage events
 [0m15:58:22.546284 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:07:14.148537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADF0718AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADF2D27D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADF2D27890>]}
+
+
+============================== 16:07:14.156751 | 4c987c72-cb12-4f42-bb51-db17900154dd ==============================
+[0m16:07:14.156751 [info ] [MainThread]: Running with dbt=1.12.6
+[0m16:07:14.157933 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt ', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'dbt\\logs'}
+[0m16:07:14.161896 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  Could not find profile named 'ontario_grid'
+[0m16:07:14.163885 [debug] [MainThread]: Command `cli build` failed at 16:07:14.163635 after 0.35 seconds
+[0m16:07:14.164703 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADF2D3E780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADF2D7D370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADF2D71BF0>]}
+[0m16:07:14.165493 [debug] [MainThread]: Flushing usage events
+[0m16:07:14.886902 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:23:10.895655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D45024EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D475DFED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D475DFB10>]}
+
+
+============================== 16:23:10.905544 | a8bf4c83-3627-4900-a63e-a41e110431b7 ==============================
+[0m16:23:10.905544 [info ] [MainThread]: Running with dbt=1.12.6
+[0m16:23:10.906569 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'dbt', 'invocation_command': 'dbt debug --project-dir dbt --profiles-dir dbt', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'dbt\\logs'}
+[0m16:23:10.970939 [info ] [MainThread]: dbt version: 1.12.6
+[0m16:23:10.971765 [info ] [MainThread]: python version: 3.13.3
+[0m16:23:10.972525 [info ] [MainThread]: python path: C:\Users\HP\AppData\Local\Programs\Python\Python313\python.exe
+[0m16:23:10.973341 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:23:11.298226 [info ] [MainThread]: Using profiles dir at dbt
+[0m16:23:11.299004 [info ] [MainThread]: Using profiles.yml file at dbt\profiles.yml
+[0m16:23:11.299842 [info ] [MainThread]: Using dbt_project.yml file at dbt\dbt_project.yml
+[0m16:23:11.305181 [info ] [MainThread]: adapter type: duckdb
+[0m16:23:11.305985 [info ] [MainThread]: adapter version: 1.11.0
+[0m16:23:11.485011 [info ] [MainThread]: Configuration:
+[0m16:23:11.486081 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:23:11.486832 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:23:11.487579 [info ] [MainThread]: Required dependencies:
+[0m16:23:11.488196 [debug] [MainThread]: Executing "git --help"
+[0m16:23:11.561580 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:23:11.562235 [debug] [MainThread]: STDERR: "b''"
+[0m16:23:11.562779 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:23:11.563412 [info ] [MainThread]: Connection:
+[0m16:23:11.564043 [info ] [MainThread]:   database: ontario_grid
+[0m16:23:11.564638 [info ] [MainThread]:   schema: analytics
+[0m16:23:11.565237 [info ] [MainThread]:   path: ../ontario_grid.duckdb
+[0m16:23:11.565836 [info ] [MainThread]:   config_options: None
+[0m16:23:11.566404 [info ] [MainThread]:   extensions: None
+[0m16:23:11.566977 [info ] [MainThread]:   settings: {}
+[0m16:23:11.567708 [info ] [MainThread]:   external_root: .
+[0m16:23:11.568592 [info ] [MainThread]:   use_credential_provider: None
+[0m16:23:11.569403 [info ] [MainThread]:   attach: None
+[0m16:23:11.570064 [info ] [MainThread]:   filesystems: None
+[0m16:23:11.570690 [info ] [MainThread]:   remote: None
+[0m16:23:11.571311 [info ] [MainThread]:   plugins: None
+[0m16:23:11.571926 [info ] [MainThread]:   disable_transactions: False
+[0m16:23:11.572804 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m16:23:12.260026 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m16:23:12.428442 [debug] [MainThread]: Using duckdb connection "debug"
+[0m16:23:12.429133 [debug] [MainThread]: On debug: select 1 as id
+[0m16:23:12.429728 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:23:12.470503 [debug] [MainThread]: SQL status: OK in 0.041 seconds
+[0m16:23:12.471854 [debug] [MainThread]: On debug: Close
+[0m16:23:12.472685 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:23:12.473687 [info ] [MainThread]: [32mAll checks passed![0m
+[0m16:23:12.475345 [debug] [MainThread]: Command `dbt debug` succeeded at 16:23:12.475109 after 1.87 seconds
+[0m16:23:12.475957 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:23:12.476401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D47B97100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D47D43E30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D47CCA580>]}
+[0m16:23:12.477006 [debug] [MainThread]: Flushing usage events
+[0m16:23:13.068025 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:23:48.414432 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A34118AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A36727D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A36727890>]}
+
+
+============================== 16:23:48.423129 | 3fa6b249-a016-42c8-ab6c-ad88d9fe799f ==============================
+[0m16:23:48.423129 [info ] [MainThread]: Running with dbt=1.12.6
+[0m16:23:48.424161 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt ', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'dbt\\logs'}
+[0m16:23:48.960170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3fa6b249-a016-42c8-ab6c-ad88d9fe799f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A345CEEA0>]}
+[0m16:23:49.064815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3fa6b249-a016-42c8-ab6c-ad88d9fe799f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A33FBD8C0>]}
+[0m16:23:49.069557 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m16:23:49.696840 [debug] [MainThread]: checksum: 1d457cf00f5a2f28805b0d1d11bf7dfcf97b9c7d7c7402fe1757c569bf284f17, vars: {}, profile: ontario_grid, target: dev, version: 1.12.6
+[0m16:23:49.890980 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m16:23:49.891991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3fa6b249-a016-42c8-ab6c-ad88d9fe799f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A36E2D750>]}
+[0m16:23:52.435352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3fa6b249-a016-42c8-ab6c-ad88d9fe799f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A368834D0>]}
+[0m16:23:52.596826 [debug] [MainThread]: Wrote artifact WritableManifest to dbt\target\manifest.json
+[0m16:23:52.608832 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt\target\semantic_manifest.json
+[0m16:23:52.673390 [debug] [MainThread]: Wrote artifact OsiDocument to dbt\target\osi_document.json
+[0m16:23:52.733566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3fa6b249-a016-42c8-ab6c-ad88d9fe799f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A36FCE7B0>]}
+[0m16:23:52.734449 [info ] [MainThread]: Found 3 models, 9 data tests, 2 sources, 500 macros
+[0m16:23:52.738875 [info ] [MainThread]: 
+[0m16:23:52.739712 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:23:52.740364 [info ] [MainThread]: 
+[0m16:23:52.741408 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:23:52.754702 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_ontario_grid'
+[0m16:23:52.907725 [debug] [ThreadPool]: Using duckdb connection "list_ontario_grid"
+[0m16:23:52.908268 [debug] [ThreadPool]: On list_ontario_grid: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "connection_name": "list_ontario_grid"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"ontario_grid"'
+    
+  
+  
+[0m16:23:52.908728 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:23:52.956158 [debug] [ThreadPool]: SQL status: OK in 0.047 seconds
+[0m16:23:52.959030 [debug] [ThreadPool]: On list_ontario_grid: Close
+[0m16:23:52.960142 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ontario_grid, now create_ontario_grid_analytics)
+[0m16:23:52.961041 [debug] [ThreadPool]: Creating schema "database: "ontario_grid"
+schema: "analytics"
+"
+[0m16:23:52.970150 [debug] [ThreadPool]: Using duckdb connection "create_ontario_grid_analytics"
+[0m16:23:52.970619 [debug] [ThreadPool]: On create_ontario_grid_analytics: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "connection_name": "create_ontario_grid_analytics"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='ontario_grid'
+        and type != 'duckdb'
+    
+  
+[0m16:23:52.971012 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:23:52.972750 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m16:23:52.974539 [debug] [ThreadPool]: Using duckdb connection "create_ontario_grid_analytics"
+[0m16:23:52.974955 [debug] [ThreadPool]: On create_ontario_grid_analytics: BEGIN
+[0m16:23:52.975810 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:23:52.976386 [debug] [ThreadPool]: Using duckdb connection "create_ontario_grid_analytics"
+[0m16:23:52.977071 [debug] [ThreadPool]: On create_ontario_grid_analytics: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "connection_name": "create_ontario_grid_analytics"} */
+
+    
+    
+        create schema if not exists "ontario_grid"."analytics"
+    
+[0m16:23:52.978594 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:23:52.980020 [debug] [ThreadPool]: On create_ontario_grid_analytics: COMMIT
+[0m16:23:52.980446 [debug] [ThreadPool]: Using duckdb connection "create_ontario_grid_analytics"
+[0m16:23:52.980832 [debug] [ThreadPool]: On create_ontario_grid_analytics: COMMIT
+[0m16:23:52.983325 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m16:23:52.983884 [debug] [ThreadPool]: On create_ontario_grid_analytics: Close
+[0m16:23:52.986610 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_ontario_grid_analytics'
+[0m16:23:52.992470 [debug] [ThreadPool]: Using duckdb connection "list_ontario_grid_analytics"
+[0m16:23:52.992901 [debug] [ThreadPool]: On list_ontario_grid_analytics: BEGIN
+[0m16:23:52.993267 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:23:52.994069 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:23:52.995038 [debug] [ThreadPool]: Using duckdb connection "list_ontario_grid_analytics"
+[0m16:23:52.995720 [debug] [ThreadPool]: On list_ontario_grid_analytics: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "connection_name": "list_ontario_grid_analytics"} */
+select
+      'ontario_grid' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'analytics'
+    and lower(table_catalog) = 'ontario_grid'
+  
+[0m16:23:53.003792 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m16:23:53.006047 [debug] [ThreadPool]: On list_ontario_grid_analytics: ROLLBACK
+[0m16:23:53.006966 [debug] [ThreadPool]: On list_ontario_grid_analytics: Close
+[0m16:23:53.008285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3fa6b249-a016-42c8-ab6c-ad88d9fe799f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A38906B60>]}
+[0m16:23:53.009099 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:23:53.010037 [debug] [MainThread]: On master: BEGIN
+[0m16:23:53.010857 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:23:53.011902 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:23:53.012368 [debug] [MainThread]: On master: COMMIT
+[0m16:23:53.012798 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:23:53.013174 [debug] [MainThread]: On master: COMMIT
+[0m16:23:53.014030 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:23:53.014569 [debug] [MainThread]: On master: Close
+[0m16:23:53.023602 [debug] [Thread-5 (]: Began running node model.ontario_grid.stg_demand
+[0m16:23:53.024344 [info ] [Thread-5 (]: 1 of 12 START sql view model analytics.stg_demand .............................. [RUN]
+[0m16:23:53.025324 [debug] [Thread-5 (]: Acquiring new duckdb connection 'model.ontario_grid.stg_demand'
+[0m16:23:53.025801 [debug] [Thread-5 (]: Began compiling node model.ontario_grid.stg_demand
+[0m16:23:53.033873 [debug] [Thread-5 (]: Writing injected SQL for node "model.ontario_grid.stg_demand"
+[0m16:23:53.035254 [debug] [Thread-5 (]: Began executing node model.ontario_grid.stg_demand
+[0m16:23:53.079394 [debug] [Thread-5 (]: Writing runtime sql for node "model.ontario_grid.stg_demand"
+[0m16:23:53.081126 [debug] [Thread-5 (]: Using duckdb connection "model.ontario_grid.stg_demand"
+[0m16:23:53.081653 [debug] [Thread-5 (]: On model.ontario_grid.stg_demand: BEGIN
+[0m16:23:53.082166 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m16:23:53.083369 [debug] [Thread-5 (]: SQL status: OK in 0.001 seconds
+[0m16:23:53.083866 [debug] [Thread-5 (]: Using duckdb connection "model.ontario_grid.stg_demand"
+[0m16:23:53.084392 [debug] [Thread-5 (]: On model.ontario_grid.stg_demand: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.stg_demand"} */
+
+  
+  create view "ontario_grid"."analytics"."stg_demand__dbt_tmp" as (
+    select
+    date                                                 as date_est,
+    hour_ending,
+    cast(date as timestamp) + to_hours(hour_ending + 4)  as hour_start_utc,
+    ontario_demand_mw,
+    market_demand_mw
+from "ontario_grid"."main"."raw_demand"
+where hour_ending between 1 and 24
+qualify row_number() over (
+    partition by date, hour_ending
+    order by source_file desc
+) = 1
+  );
+
+[0m16:23:53.096426 [debug] [Thread-5 (]: DuckDB adapter: duckdb error: Catalog Error: Table with name raw_demand does not exist!
+Did you mean "pg_catalog.pg_depend"?
+
+LINE 11: from "ontario_grid"."main"."raw_demand"
+              ^
+[0m16:23:53.096981 [debug] [Thread-5 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.stg_demand"} */
+
+  
+  create view "ontario_grid"."analytics"."stg_demand__dbt_tmp" as (
+    select
+    date                                                 as date_est,
+    hour_ending,
+    cast(date as timestamp) + to_hours(hour_ending + 4)  as hour_start_utc,
+    ontario_demand_mw,
+    market_demand_mw
+from "ontario_grid"."main"."raw_demand"
+where hour_ending between 1 and 24
+qualify row_number() over (
+    partition by date, hour_ending
+    order by source_file desc
+) = 1
+  );
+
+[0m16:23:53.097489 [debug] [Thread-5 (]: DuckDB adapter: Rolling back transaction.
+[0m16:23:53.097936 [debug] [Thread-5 (]: On model.ontario_grid.stg_demand: ROLLBACK
+[0m16:23:53.098825 [debug] [Thread-5 (]: On model.ontario_grid.stg_demand: Close
+[0m16:23:53.297751 [debug] [Thread-5 (]: Runtime Error in model stg_demand (models\staging\stg_demand.sql)
+  Catalog Error: Table with name raw_demand does not exist!
+  Did you mean "pg_catalog.pg_depend"?
+  
+  LINE 11: from "ontario_grid"."main"."raw_demand"
+                ^
+[0m16:23:53.301535 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3fa6b249-a016-42c8-ab6c-ad88d9fe799f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A386E28D0>]}
+[0m16:23:53.302410 [error] [Thread-5 (]: 1 of 12 ERROR creating sql view model analytics.stg_demand ..................... [[31mERROR[0m in 0.27s]
+[0m16:23:53.303593 [debug] [Thread-5 (]: Finished running node model.ontario_grid.stg_demand
+[0m16:23:53.304170 [debug] [Thread-5 (]: Began running node model.ontario_grid.stg_weather
+[0m16:23:53.304955 [debug] [Thread-8 (]: Marking all children of 'model.ontario_grid.stg_demand' to be skipped because of status 'error'.  Reason: Runtime Error in model stg_demand (models\staging\stg_demand.sql)
+  Catalog Error: Table with name raw_demand does not exist!
+  Did you mean "pg_catalog.pg_depend"?
+  
+  LINE 11: from "ontario_grid"."main"."raw_demand"
+                ^.
+[0m16:23:53.305599 [info ] [Thread-5 (]: 2 of 12 START sql view model analytics.stg_weather ............................. [RUN]
+[0m16:23:53.307132 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.ontario_grid.stg_demand, now model.ontario_grid.stg_weather)
+[0m16:23:53.307708 [debug] [Thread-5 (]: Began compiling node model.ontario_grid.stg_weather
+[0m16:23:53.310884 [debug] [Thread-5 (]: Writing injected SQL for node "model.ontario_grid.stg_weather"
+[0m16:23:53.312358 [debug] [Thread-5 (]: Began executing node model.ontario_grid.stg_weather
+[0m16:23:53.317982 [debug] [Thread-5 (]: Writing runtime sql for node "model.ontario_grid.stg_weather"
+[0m16:23:53.319799 [debug] [Thread-5 (]: Using duckdb connection "model.ontario_grid.stg_weather"
+[0m16:23:53.320573 [debug] [Thread-5 (]: On model.ontario_grid.stg_weather: BEGIN
+[0m16:23:53.321098 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m16:23:53.322083 [debug] [Thread-5 (]: SQL status: OK in 0.001 seconds
+[0m16:23:53.322556 [debug] [Thread-5 (]: Using duckdb connection "model.ontario_grid.stg_weather"
+[0m16:23:53.323256 [debug] [Thread-5 (]: On model.ontario_grid.stg_weather: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.stg_weather"} */
+
+  
+  create view "ontario_grid"."analytics"."stg_weather__dbt_tmp" as (
+    select time_utc,temperature_c from "ontario_grid"."main"."raw_weather"
+where temperature_c is not null
+qualify row_number() over (
+    partition by time_utc
+    order by source_file 
+) = 1
+  );
+
+[0m16:23:53.324886 [debug] [Thread-5 (]: DuckDB adapter: duckdb error: Catalog Error: Table with name raw_weather does not exist!
+Did you mean "main.sqlite_master"?
+
+LINE 5:     select time_utc,temperature_c from "ontario_grid"."main"."raw_weather"
+                                               ^
+[0m16:23:53.325419 [debug] [Thread-5 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.stg_weather"} */
+
+  
+  create view "ontario_grid"."analytics"."stg_weather__dbt_tmp" as (
+    select time_utc,temperature_c from "ontario_grid"."main"."raw_weather"
+where temperature_c is not null
+qualify row_number() over (
+    partition by time_utc
+    order by source_file 
+) = 1
+  );
+
+[0m16:23:53.325956 [debug] [Thread-5 (]: DuckDB adapter: Rolling back transaction.
+[0m16:23:53.326411 [debug] [Thread-5 (]: On model.ontario_grid.stg_weather: ROLLBACK
+[0m16:23:53.327560 [debug] [Thread-5 (]: On model.ontario_grid.stg_weather: Close
+[0m16:23:53.333106 [debug] [Thread-5 (]: Runtime Error in model stg_weather (models\staging\stg_weather.sql)
+  Catalog Error: Table with name raw_weather does not exist!
+  Did you mean "main.sqlite_master"?
+  
+  LINE 5:     select time_utc,temperature_c from "ontario_grid"."main"."raw_weather"
+                                                 ^
+[0m16:23:53.333737 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3fa6b249-a016-42c8-ab6c-ad88d9fe799f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A38B283C0>]}
+[0m16:23:53.334537 [error] [Thread-5 (]: 2 of 12 ERROR creating sql view model analytics.stg_weather .................... [[31mERROR[0m in 0.03s]
+[0m16:23:53.335715 [debug] [Thread-5 (]: Finished running node model.ontario_grid.stg_weather
+[0m16:23:53.336428 [debug] [Thread-5 (]: Began running node test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f
+[0m16:23:53.337434 [debug] [Thread-8 (]: Marking all children of 'model.ontario_grid.stg_weather' to be skipped because of status 'error'.  Reason: Runtime Error in model stg_weather (models\staging\stg_weather.sql)
+  Catalog Error: Table with name raw_weather does not exist!
+  Did you mean "main.sqlite_master"?
+  
+  LINE 5:     select time_utc,temperature_c from "ontario_grid"."main"."raw_weather"
+                                                 ^.
+[0m16:23:53.337968 [info ] [Thread-5 (]: 3 of 12 SKIP test not_null_stg_demand_hour_start_utc ........................... [[33mSKIP[0m]
+[0m16:23:53.339067 [debug] [Thread-5 (]: Finished running node test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f
+[0m16:23:53.339911 [debug] [Thread-5 (]: Began running node test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444
+[0m16:23:53.340392 [debug] [Thread-8 (]: Marking all children of 'test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f' to be skipped because of status 'skipped'. 
+[0m16:23:53.340935 [info ] [Thread-5 (]: 4 of 12 SKIP test not_null_stg_demand_ontario_demand_mw ........................ [[33mSKIP[0m]
+[0m16:23:53.341961 [debug] [Thread-5 (]: Finished running node test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444
+[0m16:23:53.342777 [debug] [Thread-5 (]: Began running node test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2
+[0m16:23:53.343298 [debug] [Thread-8 (]: Marking all children of 'test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444' to be skipped because of status 'skipped'. 
+[0m16:23:53.343950 [info ] [Thread-5 (]: 5 of 12 SKIP test unique_stg_demand_hour_start_utc ............................. [[33mSKIP[0m]
+[0m16:23:53.344875 [debug] [Thread-5 (]: Finished running node test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2
+[0m16:23:53.345412 [debug] [Thread-5 (]: Began running node test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a
+[0m16:23:53.345886 [debug] [Thread-8 (]: Marking all children of 'test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2' to be skipped because of status 'skipped'. 
+[0m16:23:53.346422 [info ] [Thread-5 (]: 6 of 12 SKIP test not_null_stg_weather_time_utc ................................ [[33mSKIP[0m]
+[0m16:23:53.347413 [debug] [Thread-5 (]: Finished running node test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a
+[0m16:23:53.348207 [debug] [Thread-5 (]: Began running node test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b
+[0m16:23:53.348803 [debug] [Thread-8 (]: Marking all children of 'test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a' to be skipped because of status 'skipped'. 
+[0m16:23:53.349553 [info ] [Thread-5 (]: 7 of 12 SKIP test unique_stg_weather_time_utc .................................. [[33mSKIP[0m]
+[0m16:23:53.350807 [debug] [Thread-5 (]: Finished running node test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b
+[0m16:23:53.351561 [debug] [Thread-8 (]: Marking all children of 'test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b' to be skipped because of status 'skipped'. 
+[0m16:23:53.352834 [debug] [Thread-5 (]: Began running node model.ontario_grid.fct_hourly
+[0m16:23:53.353418 [info ] [Thread-5 (]: 8 of 12 SKIP relation analytics.fct_hourly ..................................... [[33mSKIP[0m]
+[0m16:23:53.354341 [debug] [Thread-5 (]: Finished running node model.ontario_grid.fct_hourly
+[0m16:23:53.354911 [debug] [Thread-8 (]: Marking all children of 'model.ontario_grid.fct_hourly' to be skipped because of status 'skipped'. 
+[0m16:23:53.356019 [debug] [Thread-5 (]: Began running node test.ontario_grid.demand_in_realistic_range
+[0m16:23:53.357389 [info ] [Thread-5 (]: 9 of 12 SKIP test demand_in_realistic_range .................................... [[33mSKIP[0m]
+[0m16:23:53.358470 [debug] [Thread-5 (]: Finished running node test.ontario_grid.demand_in_realistic_range
+[0m16:23:53.359305 [debug] [Thread-5 (]: Began running node test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a
+[0m16:23:53.359823 [debug] [Thread-8 (]: Marking all children of 'test.ontario_grid.demand_in_realistic_range' to be skipped because of status 'skipped'. 
+[0m16:23:53.360577 [info ] [Thread-5 (]: 10 of 12 SKIP test not_null_fct_hourly_hour_start_utc .......................... [[33mSKIP[0m]
+[0m16:23:53.361577 [debug] [Thread-5 (]: Finished running node test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a
+[0m16:23:53.362380 [debug] [Thread-5 (]: Began running node test.ontario_grid.temperature_in_realistic_range
+[0m16:23:53.363001 [debug] [Thread-8 (]: Marking all children of 'test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a' to be skipped because of status 'skipped'. 
+[0m16:23:53.363802 [info ] [Thread-5 (]: 11 of 12 SKIP test temperature_in_realistic_range .............................. [[33mSKIP[0m]
+[0m16:23:53.365135 [debug] [Thread-5 (]: Finished running node test.ontario_grid.temperature_in_realistic_range
+[0m16:23:53.366071 [debug] [Thread-5 (]: Began running node test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1
+[0m16:23:53.366609 [debug] [Thread-8 (]: Marking all children of 'test.ontario_grid.temperature_in_realistic_range' to be skipped because of status 'skipped'. 
+[0m16:23:53.367164 [info ] [Thread-5 (]: 12 of 12 SKIP test unique_fct_hourly_hour_start_utc ............................ [[33mSKIP[0m]
+[0m16:23:53.368295 [debug] [Thread-5 (]: Finished running node test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1
+[0m16:23:53.368945 [debug] [Thread-8 (]: Marking all children of 'test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1' to be skipped because of status 'skipped'. 
+[0m16:23:53.370986 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:23:53.371748 [debug] [MainThread]: On master: BEGIN
+[0m16:23:53.372571 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:23:53.373956 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:23:53.374500 [debug] [MainThread]: On master: COMMIT
+[0m16:23:53.374961 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:23:53.375354 [debug] [MainThread]: On master: COMMIT
+[0m16:23:53.376078 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:23:53.376539 [debug] [MainThread]: On master: Close
+[0m16:23:53.377131 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:23:53.377525 [debug] [MainThread]: Connection 'create_ontario_grid_analytics' was properly closed.
+[0m16:23:53.377894 [debug] [MainThread]: Connection 'list_ontario_grid_analytics' was properly closed.
+[0m16:23:53.378227 [debug] [MainThread]: Connection 'model.ontario_grid.stg_weather' was properly closed.
+[0m16:23:53.378841 [info ] [MainThread]: 
+[0m16:23:53.379713 [info ] [MainThread]: Finished running 1 table model, 9 data tests, 2 view models in 0 hours 0 minutes and 0.64 seconds (0.64s).
+[0m16:23:53.382005 [debug] [MainThread]: Command end result
+[0m16:23:53.432439 [debug] [MainThread]: Wrote artifact WritableManifest to dbt\target\manifest.json
+[0m16:23:53.438253 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt\target\semantic_manifest.json
+[0m16:23:53.443223 [debug] [MainThread]: Wrote artifact OsiDocument to dbt\target\osi_document.json
+[0m16:23:53.458137 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt\target\run_results.json
+[0m16:23:53.458888 [info ] [MainThread]: 
+[0m16:23:53.459926 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m16:23:53.460696 [info ] [MainThread]: 
+[0m16:23:53.461558 [error] [MainThread]: [[31mERROR[0m]: in model stg_demand (models\staging\stg_demand.sql)
+[0m16:23:53.462397 [error] [MainThread]:   Runtime Error in model stg_demand (models\staging\stg_demand.sql)
+  Catalog Error: Table with name raw_demand does not exist!
+  Did you mean "pg_catalog.pg_depend"?
+  
+  LINE 11: from "ontario_grid"."main"."raw_demand"
+                ^
+[0m16:23:53.463257 [info ] [MainThread]: 
+[0m16:23:53.464120 [info ] [MainThread]:   compiled code at target\compiled\ontario_grid\models\staging\stg_demand.sql
+[0m16:23:53.465255 [info ] [MainThread]: 
+[0m16:23:53.466028 [error] [MainThread]: [[31mERROR[0m]: in model stg_weather (models\staging\stg_weather.sql)
+[0m16:23:53.466894 [error] [MainThread]:   Runtime Error in model stg_weather (models\staging\stg_weather.sql)
+  Catalog Error: Table with name raw_weather does not exist!
+  Did you mean "main.sqlite_master"?
+  
+  LINE 5:     select time_utc,temperature_c from "ontario_grid"."main"."raw_weather"
+                                                 ^
+[0m16:23:53.467785 [info ] [MainThread]: 
+[0m16:23:53.468964 [info ] [MainThread]:   compiled code at target\compiled\ontario_grid\models\staging\stg_weather.sql
+[0m16:23:53.469606 [info ] [MainThread]: 
+[0m16:23:53.470344 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=2 SKIP=10 NO-OP=0 REUSED=0 TOTAL=12
+[0m16:23:53.474100 [debug] [MainThread]: Command `cli build` failed at 16:23:53.473826 after 5.32 seconds
+[0m16:23:53.475119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A389E6AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A38AE8170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A36A18850>]}
+[0m16:23:53.475858 [debug] [MainThread]: Flushing usage events
+[0m16:23:54.029532 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:56:56.267107 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DBE5B8EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DC0B391D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DC0B396D0>]}
+
+
+============================== 16:56:56.275979 | aca379c1-39e9-4ff4-adeb-aeaf363788c4 ==============================
+[0m16:56:56.275979 [info ] [MainThread]: Running with dbt=1.12.6
+[0m16:56:56.277135 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt debug --project-dir dbt --profiles-dir dbt', 'log_path': 'dbt\\logs'}
+[0m16:56:56.337434 [info ] [MainThread]: dbt version: 1.12.6
+[0m16:56:56.338301 [info ] [MainThread]: python version: 3.13.3
+[0m16:56:56.339041 [info ] [MainThread]: python path: C:\Users\HP\AppData\Local\Programs\Python\Python313\python.exe
+[0m16:56:56.339641 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:56:56.340743 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  Syntax error near line 1
+  ------------------------------
+  1  | ﻿@'
+  2  | ontario_grid:
+  3  |   target: dev
+  4  |   outputs:
+  
+  Raw Error:
+  ------------------------------
+  while scanning for the next token
+  found character that cannot start any token
+    in "<unicode string>", line 1, column 1
+[0m16:56:56.343696 [debug] [MainThread]: Command `dbt debug` failed at 16:56:56.343535 after 0.22 seconds
+[0m16:56:56.344216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DC09C76F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DC09CBE30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DC0B5D150>]}
+[0m16:56:56.344779 [debug] [MainThread]: Flushing usage events
+[0m16:56:57.157525 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:57:56.682710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F215674EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F217C33ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F217C33B10>]}
+
+
+============================== 16:57:56.690403 | 48398f9c-3bfc-44a3-8806-bfa86c2d14cf ==============================
+[0m16:57:56.690403 [info ] [MainThread]: Running with dbt=1.12.6
+[0m16:57:56.691507 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt debug --project-dir dbt --profiles-dir dbt', 'log_path': 'dbt\\logs'}
+[0m16:57:56.742136 [info ] [MainThread]: dbt version: 1.12.6
+[0m16:57:56.743022 [info ] [MainThread]: python version: 3.13.3
+[0m16:57:56.743772 [info ] [MainThread]: python path: C:\Users\HP\AppData\Local\Programs\Python\Python313\python.exe
+[0m16:57:56.744490 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:57:56.954594 [info ] [MainThread]: Using profiles dir at dbt
+[0m16:57:56.955453 [info ] [MainThread]: Using profiles.yml file at dbt\profiles.yml
+[0m16:57:56.956278 [info ] [MainThread]: Using dbt_project.yml file at dbt\dbt_project.yml
+[0m16:57:56.961850 [info ] [MainThread]: adapter type: duckdb
+[0m16:57:56.962586 [info ] [MainThread]: adapter version: 1.11.0
+[0m16:57:57.136674 [info ] [MainThread]: Configuration:
+[0m16:57:57.137492 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:57:57.138174 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:57:57.139002 [info ] [MainThread]: Required dependencies:
+[0m16:57:57.139797 [debug] [MainThread]: Executing "git --help"
+[0m16:57:57.211127 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:57:57.211801 [debug] [MainThread]: STDERR: "b''"
+[0m16:57:57.212361 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:57:57.212991 [info ] [MainThread]: Connection:
+[0m16:57:57.213594 [info ] [MainThread]:   database: warehouse
+[0m16:57:57.214144 [info ] [MainThread]:   schema: analytics
+[0m16:57:57.214737 [info ] [MainThread]:   path: ../data/warehouse.duckdb
+[0m16:57:57.215411 [info ] [MainThread]:   config_options: None
+[0m16:57:57.216095 [info ] [MainThread]:   extensions: None
+[0m16:57:57.216672 [info ] [MainThread]:   settings: {}
+[0m16:57:57.217395 [info ] [MainThread]:   external_root: .
+[0m16:57:57.218031 [info ] [MainThread]:   use_credential_provider: None
+[0m16:57:57.218773 [info ] [MainThread]:   attach: None
+[0m16:57:57.219487 [info ] [MainThread]:   filesystems: None
+[0m16:57:57.220058 [info ] [MainThread]:   remote: None
+[0m16:57:57.220679 [info ] [MainThread]:   plugins: None
+[0m16:57:57.221356 [info ] [MainThread]:   disable_transactions: False
+[0m16:57:57.222280 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m16:57:57.914197 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m16:57:58.086565 [debug] [MainThread]: Using duckdb connection "debug"
+[0m16:57:58.087289 [debug] [MainThread]: On debug: select 1 as id
+[0m16:57:58.088121 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:57:58.126275 [debug] [MainThread]: DuckDB adapter: duckdb error: IO Error: Cannot open file "D:\PROJECT\data\warehouse.duckdb": The system cannot find the path specified.
+
+[0m16:57:58.127056 [debug] [MainThread]: DuckDB adapter: Error running SQL: select 1 as id
+[0m16:57:58.127506 [debug] [MainThread]: DuckDB adapter: Rolling back transaction.
+[0m16:57:58.127958 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:57:58.151559 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:57:58.152486 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:57:58.153290 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >IO Error: Cannot open file "D:\PROJECT\data\warehouse.duckdb": The system cannot find the path specified.
+
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:57:58.154850 [debug] [MainThread]: Command `dbt debug` failed at 16:57:58.154682 after 1.72 seconds
+[0m16:57:58.155313 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:57:58.155993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F218670D60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F21835BE30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2182FB8A0>]}
+[0m16:57:58.156739 [debug] [MainThread]: Flushing usage events
+[0m16:58:03.719276 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:59:02.436648 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022023C84EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022026243ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022026243B10>]}
+
+
+============================== 16:59:02.444386 | 784f496e-3a19-4662-817e-f2787b5c060d ==============================
+[0m16:59:02.444386 [info ] [MainThread]: Running with dbt=1.12.6
+[0m16:59:02.445429 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug --project-dir dbt --profiles-dir dbt', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'dbt\\logs'}
+[0m16:59:02.496766 [info ] [MainThread]: dbt version: 1.12.6
+[0m16:59:02.497549 [info ] [MainThread]: python version: 3.13.3
+[0m16:59:02.498254 [info ] [MainThread]: python path: C:\Users\HP\AppData\Local\Programs\Python\Python313\python.exe
+[0m16:59:02.498879 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:59:02.675581 [info ] [MainThread]: Using profiles dir at dbt
+[0m16:59:02.676370 [info ] [MainThread]: Using profiles.yml file at dbt\profiles.yml
+[0m16:59:02.677050 [info ] [MainThread]: Using dbt_project.yml file at dbt\dbt_project.yml
+[0m16:59:02.681884 [info ] [MainThread]: adapter type: duckdb
+[0m16:59:02.682554 [info ] [MainThread]: adapter version: 1.11.0
+[0m16:59:02.930337 [info ] [MainThread]: Configuration:
+[0m16:59:02.931233 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:59:02.931976 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:59:02.932685 [info ] [MainThread]: Required dependencies:
+[0m16:59:02.933431 [debug] [MainThread]: Executing "git --help"
+[0m16:59:03.004312 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:59:03.005007 [debug] [MainThread]: STDERR: "b''"
+[0m16:59:03.005594 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:59:03.006321 [info ] [MainThread]: Connection:
+[0m16:59:03.007151 [info ] [MainThread]:   database: warehouse
+[0m16:59:03.007946 [info ] [MainThread]:   schema: analytics
+[0m16:59:03.008636 [info ] [MainThread]:   path: data/warehouse.duckdb
+[0m16:59:03.009249 [info ] [MainThread]:   config_options: None
+[0m16:59:03.009940 [info ] [MainThread]:   extensions: None
+[0m16:59:03.010716 [info ] [MainThread]:   settings: {}
+[0m16:59:03.011527 [info ] [MainThread]:   external_root: .
+[0m16:59:03.012257 [info ] [MainThread]:   use_credential_provider: None
+[0m16:59:03.013134 [info ] [MainThread]:   attach: None
+[0m16:59:03.013861 [info ] [MainThread]:   filesystems: None
+[0m16:59:03.014598 [info ] [MainThread]:   remote: None
+[0m16:59:03.015391 [info ] [MainThread]:   plugins: None
+[0m16:59:03.016185 [info ] [MainThread]:   disable_transactions: False
+[0m16:59:03.017357 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m16:59:03.555640 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m16:59:03.695419 [debug] [MainThread]: Using duckdb connection "debug"
+[0m16:59:03.695937 [debug] [MainThread]: On debug: select 1 as id
+[0m16:59:03.696336 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:59:03.734439 [debug] [MainThread]: SQL status: OK in 0.038 seconds
+[0m16:59:03.736068 [debug] [MainThread]: On debug: Close
+[0m16:59:03.736529 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:59:03.737179 [info ] [MainThread]: [32mAll checks passed![0m
+[0m16:59:03.738494 [debug] [MainThread]: Command `dbt debug` succeeded at 16:59:03.738339 after 1.53 seconds
+[0m16:59:03.738923 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:59:03.739373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220263C7100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220268AFE30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002202684A580>]}
+[0m16:59:03.739870 [debug] [MainThread]: Flushing usage events
+[0m16:59:04.339269 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:59:52.078961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0AB05160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0D10FD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0D10FC50>]}
+
+
+============================== 16:59:52.087515 | f2cd8adb-d927-4ff6-84d6-d75d775271e0 ==============================
+[0m16:59:52.087515 [info ] [MainThread]: Running with dbt=1.12.6
+[0m16:59:52.088308 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'D:\\PROJECT\\Electricity grid pipeline\\dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt build --project-dir D:\\PROJECT\\Electricity grid pipeline\\dbt --profiles-dir D:\\PROJECT\\Electricity grid pipeline\\dbt', 'log_path': 'D:\\PROJECT\\Electricity grid pipeline\\dbt\\logs'}
+[0m16:59:52.626705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f2cd8adb-d927-4ff6-84d6-d75d775271e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0AFC2FD0>]}
+[0m16:59:52.733609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f2cd8adb-d927-4ff6-84d6-d75d775271e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0A991480>]}
+[0m16:59:52.739222 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m16:59:53.353990 [debug] [MainThread]: checksum: 1d457cf00f5a2f28805b0d1d11bf7dfcf97b9c7d7c7402fe1757c569bf284f17, vars: {}, profile: ontario_grid, target: dev, version: 1.12.6
+[0m16:59:53.564902 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m16:59:53.565569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f2cd8adb-d927-4ff6-84d6-d75d775271e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0EB85B50>]}
+[0m16:59:56.405647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f2cd8adb-d927-4ff6-84d6-d75d775271e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0EBAB7A0>]}
+[0m16:59:56.575890 [debug] [MainThread]: Wrote artifact WritableManifest to D:\PROJECT\Electricity grid pipeline\dbt\target\manifest.json
+[0m16:59:56.581786 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\PROJECT\Electricity grid pipeline\dbt\target\semantic_manifest.json
+[0m16:59:56.654151 [debug] [MainThread]: Wrote artifact OsiDocument to D:\PROJECT\Electricity grid pipeline\dbt\target\osi_document.json
+[0m16:59:56.711735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f2cd8adb-d927-4ff6-84d6-d75d775271e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0EC91390>]}
+[0m16:59:56.712392 [info ] [MainThread]: Found 3 models, 9 data tests, 2 sources, 500 macros
+[0m16:59:56.715934 [info ] [MainThread]: 
+[0m16:59:56.716436 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:59:56.716849 [info ] [MainThread]: 
+[0m16:59:56.717534 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:59:56.723838 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse'
+[0m16:59:56.853224 [debug] [ThreadPool]: Using duckdb connection "list_warehouse"
+[0m16:59:56.853715 [debug] [ThreadPool]: On list_warehouse: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "connection_name": "list_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"warehouse"'
+    
+  
+  
+[0m16:59:56.854104 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:59:56.895518 [debug] [ThreadPool]: SQL status: OK in 0.041 seconds
+[0m16:59:56.897645 [debug] [ThreadPool]: On list_warehouse: Close
+[0m16:59:56.898579 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_warehouse, now create_warehouse_analytics)
+[0m16:59:56.899363 [debug] [ThreadPool]: Creating schema "database: "warehouse"
+schema: "analytics"
+"
+[0m16:59:56.907171 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_analytics"
+[0m16:59:56.907571 [debug] [ThreadPool]: On create_warehouse_analytics: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "connection_name": "create_warehouse_analytics"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='warehouse'
+        and type != 'duckdb'
+    
+  
+[0m16:59:56.907912 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:59:56.909120 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:59:56.910434 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_analytics"
+[0m16:59:56.910822 [debug] [ThreadPool]: On create_warehouse_analytics: BEGIN
+[0m16:59:56.911379 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:59:56.911870 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_analytics"
+[0m16:59:56.912314 [debug] [ThreadPool]: On create_warehouse_analytics: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "connection_name": "create_warehouse_analytics"} */
+
+    
+    
+        create schema if not exists "warehouse"."analytics"
+    
+[0m16:59:56.914856 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m16:59:56.916124 [debug] [ThreadPool]: On create_warehouse_analytics: COMMIT
+[0m16:59:56.916514 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_analytics"
+[0m16:59:56.916854 [debug] [ThreadPool]: On create_warehouse_analytics: COMMIT
+[0m16:59:56.917459 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:59:56.917825 [debug] [ThreadPool]: On create_warehouse_analytics: Close
+[0m16:59:56.920266 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_analytics'
+[0m16:59:56.925485 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_analytics"
+[0m16:59:56.925856 [debug] [ThreadPool]: On list_warehouse_analytics: BEGIN
+[0m16:59:56.926176 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:59:56.926814 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:59:56.927167 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_analytics"
+[0m16:59:56.927617 [debug] [ThreadPool]: On list_warehouse_analytics: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "connection_name": "list_warehouse_analytics"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'analytics'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m16:59:56.942189 [debug] [ThreadPool]: SQL status: OK in 0.014 seconds
+[0m16:59:56.944100 [debug] [ThreadPool]: On list_warehouse_analytics: ROLLBACK
+[0m16:59:56.944795 [debug] [ThreadPool]: On list_warehouse_analytics: Close
+[0m16:59:56.946661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f2cd8adb-d927-4ff6-84d6-d75d775271e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0F2C71E0>]}
+[0m16:59:56.947201 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:59:56.947550 [debug] [MainThread]: On master: BEGIN
+[0m16:59:56.947868 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:59:56.948563 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:59:56.949042 [debug] [MainThread]: On master: COMMIT
+[0m16:59:56.949533 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:59:56.949964 [debug] [MainThread]: On master: COMMIT
+[0m16:59:56.950782 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:59:56.951135 [debug] [MainThread]: On master: Close
+[0m16:59:56.959055 [debug] [Thread-1 (]: Began running node model.ontario_grid.stg_demand
+[0m16:59:56.959752 [info ] [Thread-1 (]: 1 of 12 START sql view model analytics.stg_demand .............................. [RUN]
+[0m16:59:56.960493 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.ontario_grid.stg_demand'
+[0m16:59:56.960907 [debug] [Thread-1 (]: Began compiling node model.ontario_grid.stg_demand
+[0m16:59:56.967475 [debug] [Thread-1 (]: Writing injected SQL for node "model.ontario_grid.stg_demand"
+[0m16:59:56.968836 [debug] [Thread-1 (]: Began executing node model.ontario_grid.stg_demand
+[0m16:59:57.003345 [debug] [Thread-1 (]: Writing runtime sql for node "model.ontario_grid.stg_demand"
+[0m16:59:57.004868 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.stg_demand"
+[0m16:59:57.005323 [debug] [Thread-1 (]: On model.ontario_grid.stg_demand: BEGIN
+[0m16:59:57.006594 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:59:57.007878 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.008293 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.stg_demand"
+[0m16:59:57.008713 [debug] [Thread-1 (]: On model.ontario_grid.stg_demand: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.stg_demand"} */
+
+  
+  create view "warehouse"."analytics"."stg_demand__dbt_tmp" as (
+    select
+    date                                                 as date_est,
+    hour_ending,
+    cast(date as timestamp) + to_hours(hour_ending + 4)  as hour_start_utc,
+    ontario_demand_mw,
+    market_demand_mw
+from "warehouse"."main"."raw_demand"
+where hour_ending between 1 and 24
+qualify row_number() over (
+    partition by date, hour_ending
+    order by source_file desc
+) = 1
+  );
+
+[0m16:59:57.010413 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.016524 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.stg_demand"
+[0m16:59:57.016971 [debug] [Thread-1 (]: On model.ontario_grid.stg_demand: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.stg_demand"} */
+alter view "warehouse"."analytics"."stg_demand" rename to "stg_demand__dbt_backup"
+[0m16:59:57.018543 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.020878 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.stg_demand"
+[0m16:59:57.021430 [debug] [Thread-1 (]: On model.ontario_grid.stg_demand: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.stg_demand"} */
+alter view "warehouse"."analytics"."stg_demand__dbt_tmp" rename to "stg_demand"
+[0m16:59:57.022208 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:59:57.037483 [debug] [Thread-1 (]: On model.ontario_grid.stg_demand: COMMIT
+[0m16:59:57.037998 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.stg_demand"
+[0m16:59:57.038401 [debug] [Thread-1 (]: On model.ontario_grid.stg_demand: COMMIT
+[0m16:59:57.040889 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m16:59:57.046045 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.stg_demand"
+[0m16:59:57.046472 [debug] [Thread-1 (]: On model.ontario_grid.stg_demand: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.stg_demand"} */
+
+      drop view if exists "warehouse"."analytics"."stg_demand__dbt_backup" cascade
+    
+[0m16:59:57.048208 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.050818 [debug] [Thread-1 (]: On model.ontario_grid.stg_demand: Close
+[0m16:59:57.054400 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f2cd8adb-d927-4ff6-84d6-d75d775271e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0F0DE2D0>]}
+[0m16:59:57.055240 [info ] [Thread-1 (]: 1 of 12 OK created sql view model analytics.stg_demand ......................... [[32mOK[0m in 0.09s]
+[0m16:59:57.056031 [debug] [Thread-1 (]: Finished running node model.ontario_grid.stg_demand
+[0m16:59:57.056511 [debug] [Thread-1 (]: Began running node model.ontario_grid.stg_weather
+[0m16:59:57.057174 [info ] [Thread-1 (]: 2 of 12 START sql view model analytics.stg_weather ............................. [RUN]
+[0m16:59:57.057898 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ontario_grid.stg_demand, now model.ontario_grid.stg_weather)
+[0m16:59:57.058359 [debug] [Thread-1 (]: Began compiling node model.ontario_grid.stg_weather
+[0m16:59:57.060276 [debug] [Thread-1 (]: Writing injected SQL for node "model.ontario_grid.stg_weather"
+[0m16:59:57.061373 [debug] [Thread-1 (]: Began executing node model.ontario_grid.stg_weather
+[0m16:59:57.064936 [debug] [Thread-1 (]: Writing runtime sql for node "model.ontario_grid.stg_weather"
+[0m16:59:57.066099 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.stg_weather"
+[0m16:59:57.066529 [debug] [Thread-1 (]: On model.ontario_grid.stg_weather: BEGIN
+[0m16:59:57.066908 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:59:57.067648 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.068047 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.stg_weather"
+[0m16:59:57.068531 [debug] [Thread-1 (]: On model.ontario_grid.stg_weather: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.stg_weather"} */
+
+  
+  create view "warehouse"."analytics"."stg_weather__dbt_tmp" as (
+    select time_utc,temperature_c from "warehouse"."main"."raw_weather"
+where temperature_c is not null
+qualify row_number() over (
+    partition by time_utc
+    order by source_file 
+) = 1
+  );
+
+[0m16:59:57.069532 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.072184 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.stg_weather"
+[0m16:59:57.072638 [debug] [Thread-1 (]: On model.ontario_grid.stg_weather: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.stg_weather"} */
+alter view "warehouse"."analytics"."stg_weather" rename to "stg_weather__dbt_backup"
+[0m16:59:57.073495 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:59:57.075658 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.stg_weather"
+[0m16:59:57.076081 [debug] [Thread-1 (]: On model.ontario_grid.stg_weather: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.stg_weather"} */
+alter view "warehouse"."analytics"."stg_weather__dbt_tmp" rename to "stg_weather"
+[0m16:59:57.076766 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:59:57.078482 [debug] [Thread-1 (]: On model.ontario_grid.stg_weather: COMMIT
+[0m16:59:57.078890 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.stg_weather"
+[0m16:59:57.079276 [debug] [Thread-1 (]: On model.ontario_grid.stg_weather: COMMIT
+[0m16:59:57.081290 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m16:59:57.083417 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.stg_weather"
+[0m16:59:57.083828 [debug] [Thread-1 (]: On model.ontario_grid.stg_weather: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.stg_weather"} */
+
+      drop view if exists "warehouse"."analytics"."stg_weather__dbt_backup" cascade
+    
+[0m16:59:57.085492 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.086936 [debug] [Thread-1 (]: On model.ontario_grid.stg_weather: Close
+[0m16:59:57.087561 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f2cd8adb-d927-4ff6-84d6-d75d775271e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0F07FAC0>]}
+[0m16:59:57.088216 [info ] [Thread-1 (]: 2 of 12 OK created sql view model analytics.stg_weather ........................ [[32mOK[0m in 0.03s]
+[0m16:59:57.088992 [debug] [Thread-1 (]: Finished running node model.ontario_grid.stg_weather
+[0m16:59:57.089467 [debug] [Thread-1 (]: Began running node test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f
+[0m16:59:57.090075 [info ] [Thread-1 (]: 3 of 12 START test not_null_stg_demand_hour_start_utc .......................... [RUN]
+[0m16:59:57.090782 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ontario_grid.stg_weather, now test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f)
+[0m16:59:57.091230 [debug] [Thread-1 (]: Began compiling node test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f
+[0m16:59:57.106099 [debug] [Thread-1 (]: Writing injected SQL for node "test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f"
+[0m16:59:57.107538 [debug] [Thread-1 (]: Began executing node test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f
+[0m16:59:57.125873 [debug] [Thread-1 (]: Writing runtime sql for node "test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f"
+[0m16:59:57.127094 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f"
+[0m16:59:57.127508 [debug] [Thread-1 (]: On test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f: BEGIN
+[0m16:59:57.127897 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:59:57.128691 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.129096 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f"
+[0m16:59:57.129557 [debug] [Thread-1 (]: On test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select hour_start_utc
+from "warehouse"."analytics"."stg_demand"
+where hour_start_utc is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:59:57.135993 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m16:59:57.139876 [debug] [Thread-1 (]: On test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f: ROLLBACK
+[0m16:59:57.140518 [debug] [Thread-1 (]: On test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f: Close
+[0m16:59:57.141185 [info ] [Thread-1 (]: 3 of 12 PASS not_null_stg_demand_hour_start_utc ................................ [[32mPASS[0m in 0.05s]
+[0m16:59:57.141916 [debug] [Thread-1 (]: Finished running node test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f
+[0m16:59:57.142364 [debug] [Thread-1 (]: Began running node test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444
+[0m16:59:57.142939 [info ] [Thread-1 (]: 4 of 12 START test not_null_stg_demand_ontario_demand_mw ....................... [RUN]
+[0m16:59:57.143504 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ontario_grid.not_null_stg_demand_hour_start_utc.5d449e103f, now test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444)
+[0m16:59:57.143927 [debug] [Thread-1 (]: Began compiling node test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444
+[0m16:59:57.150213 [debug] [Thread-1 (]: Writing injected SQL for node "test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444"
+[0m16:59:57.151367 [debug] [Thread-1 (]: Began executing node test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444
+[0m16:59:57.153194 [debug] [Thread-1 (]: Writing runtime sql for node "test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444"
+[0m16:59:57.154438 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444"
+[0m16:59:57.154881 [debug] [Thread-1 (]: On test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444: BEGIN
+[0m16:59:57.155271 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:59:57.155951 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.156336 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444"
+[0m16:59:57.156712 [debug] [Thread-1 (]: On test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ontario_demand_mw
+from "warehouse"."analytics"."stg_demand"
+where ontario_demand_mw is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:59:57.158196 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.159805 [debug] [Thread-1 (]: On test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444: ROLLBACK
+[0m16:59:57.160432 [debug] [Thread-1 (]: On test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444: Close
+[0m16:59:57.161076 [info ] [Thread-1 (]: 4 of 12 PASS not_null_stg_demand_ontario_demand_mw ............................. [[32mPASS[0m in 0.02s]
+[0m16:59:57.161801 [debug] [Thread-1 (]: Finished running node test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444
+[0m16:59:57.162310 [debug] [Thread-1 (]: Began running node test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2
+[0m16:59:57.162808 [info ] [Thread-1 (]: 5 of 12 START test unique_stg_demand_hour_start_utc ............................ [RUN]
+[0m16:59:57.163360 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ontario_grid.not_null_stg_demand_ontario_demand_mw.b1faca3444, now test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2)
+[0m16:59:57.163743 [debug] [Thread-1 (]: Began compiling node test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2
+[0m16:59:57.175527 [debug] [Thread-1 (]: Writing injected SQL for node "test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2"
+[0m16:59:57.177067 [debug] [Thread-1 (]: Began executing node test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2
+[0m16:59:57.178965 [debug] [Thread-1 (]: Writing runtime sql for node "test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2"
+[0m16:59:57.180177 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2"
+[0m16:59:57.180635 [debug] [Thread-1 (]: On test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2: BEGIN
+[0m16:59:57.181021 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:59:57.181755 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.182135 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2"
+[0m16:59:57.182520 [debug] [Thread-1 (]: On test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    hour_start_utc as unique_field,
+    count(*) as n_records
+
+from "warehouse"."analytics"."stg_demand"
+where hour_start_utc is not null
+group by hour_start_utc
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:59:57.196111 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m16:59:57.197901 [debug] [Thread-1 (]: On test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2: ROLLBACK
+[0m16:59:57.198538 [debug] [Thread-1 (]: On test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2: Close
+[0m16:59:57.199208 [info ] [Thread-1 (]: 5 of 12 PASS unique_stg_demand_hour_start_utc .................................. [[32mPASS[0m in 0.04s]
+[0m16:59:57.199946 [debug] [Thread-1 (]: Finished running node test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2
+[0m16:59:57.200479 [debug] [Thread-1 (]: Began running node test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a
+[0m16:59:57.201030 [info ] [Thread-1 (]: 6 of 12 START test not_null_stg_weather_time_utc ............................... [RUN]
+[0m16:59:57.201579 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ontario_grid.unique_stg_demand_hour_start_utc.683e7447e2, now test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a)
+[0m16:59:57.201977 [debug] [Thread-1 (]: Began compiling node test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a
+[0m16:59:57.208185 [debug] [Thread-1 (]: Writing injected SQL for node "test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a"
+[0m16:59:57.209431 [debug] [Thread-1 (]: Began executing node test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a
+[0m16:59:57.211340 [debug] [Thread-1 (]: Writing runtime sql for node "test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a"
+[0m16:59:57.212423 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a"
+[0m16:59:57.212832 [debug] [Thread-1 (]: On test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a: BEGIN
+[0m16:59:57.213220 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:59:57.214005 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.214389 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a"
+[0m16:59:57.214849 [debug] [Thread-1 (]: On test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select time_utc
+from "warehouse"."analytics"."stg_weather"
+where time_utc is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:59:57.217314 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m16:59:57.219281 [debug] [Thread-1 (]: On test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a: ROLLBACK
+[0m16:59:57.219993 [debug] [Thread-1 (]: On test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a: Close
+[0m16:59:57.220797 [info ] [Thread-1 (]: 6 of 12 PASS not_null_stg_weather_time_utc ..................................... [[32mPASS[0m in 0.02s]
+[0m16:59:57.221633 [debug] [Thread-1 (]: Finished running node test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a
+[0m16:59:57.222068 [debug] [Thread-1 (]: Began running node test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b
+[0m16:59:57.222611 [info ] [Thread-1 (]: 7 of 12 START test unique_stg_weather_time_utc ................................. [RUN]
+[0m16:59:57.223163 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ontario_grid.not_null_stg_weather_time_utc.bb57f37c0a, now test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b)
+[0m16:59:57.223544 [debug] [Thread-1 (]: Began compiling node test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b
+[0m16:59:57.230543 [debug] [Thread-1 (]: Writing injected SQL for node "test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b"
+[0m16:59:57.231821 [debug] [Thread-1 (]: Began executing node test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b
+[0m16:59:57.233607 [debug] [Thread-1 (]: Writing runtime sql for node "test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b"
+[0m16:59:57.234682 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b"
+[0m16:59:57.235120 [debug] [Thread-1 (]: On test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b: BEGIN
+[0m16:59:57.235495 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:59:57.236185 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.236570 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b"
+[0m16:59:57.236950 [debug] [Thread-1 (]: On test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    time_utc as unique_field,
+    count(*) as n_records
+
+from "warehouse"."analytics"."stg_weather"
+where time_utc is not null
+group by time_utc
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:59:57.243927 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m16:59:57.245708 [debug] [Thread-1 (]: On test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b: ROLLBACK
+[0m16:59:57.246314 [debug] [Thread-1 (]: On test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b: Close
+[0m16:59:57.246976 [info ] [Thread-1 (]: 7 of 12 PASS unique_stg_weather_time_utc ....................................... [[32mPASS[0m in 0.02s]
+[0m16:59:57.247705 [debug] [Thread-1 (]: Finished running node test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b
+[0m16:59:57.248467 [debug] [Thread-1 (]: Began running node model.ontario_grid.fct_hourly
+[0m16:59:57.249150 [info ] [Thread-1 (]: 8 of 12 START sql table model analytics.fct_hourly ............................. [RUN]
+[0m16:59:57.249750 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ontario_grid.unique_stg_weather_time_utc.28cfe2a45b, now model.ontario_grid.fct_hourly)
+[0m16:59:57.250205 [debug] [Thread-1 (]: Began compiling node model.ontario_grid.fct_hourly
+[0m16:59:57.252334 [debug] [Thread-1 (]: Writing injected SQL for node "model.ontario_grid.fct_hourly"
+[0m16:59:57.253612 [debug] [Thread-1 (]: Began executing node model.ontario_grid.fct_hourly
+[0m16:59:57.292232 [debug] [Thread-1 (]: Writing runtime sql for node "model.ontario_grid.fct_hourly"
+[0m16:59:57.293509 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.fct_hourly"
+[0m16:59:57.293908 [debug] [Thread-1 (]: On model.ontario_grid.fct_hourly: BEGIN
+[0m16:59:57.294309 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:59:57.295092 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.295485 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.fct_hourly"
+[0m16:59:57.295851 [debug] [Thread-1 (]: On model.ontario_grid.fct_hourly: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.fct_hourly"} */
+
+    
+
+    create  table
+      "warehouse"."analytics"."fct_hourly__dbt_tmp"
+  
+    
+    as (
+      select
+    d.hour_start_utc,
+    d.date_est,
+    d.hour_ending,
+    dayname(d.date_est)  as day_of_week,
+    month(d.date_est)    as month,
+    d.ontario_demand_mw,
+    d.market_demand_mw,
+    w.temperature_c
+from "warehouse"."analytics"."stg_demand" d
+left join "warehouse"."analytics"."stg_weather" w
+    on w.time_utc = d.hour_start_utc
+    );
+    
+  
+[0m16:59:57.319331 [debug] [Thread-1 (]: SQL status: OK in 0.023 seconds
+[0m16:59:57.324514 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.fct_hourly"
+[0m16:59:57.324925 [debug] [Thread-1 (]: On model.ontario_grid.fct_hourly: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.fct_hourly"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE database_name = 'warehouse'
+      AND schema_name = 'analytics'
+      AND table_name = 'fct_hourly'
+  
+[0m16:59:57.325916 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.328706 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.fct_hourly"
+[0m16:59:57.329091 [debug] [Thread-1 (]: On model.ontario_grid.fct_hourly: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.fct_hourly"} */
+alter table "warehouse"."analytics"."fct_hourly" rename to "fct_hourly__dbt_backup"
+[0m16:59:57.329747 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:59:57.331688 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.fct_hourly"
+[0m16:59:57.332061 [debug] [Thread-1 (]: On model.ontario_grid.fct_hourly: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.fct_hourly"} */
+alter table "warehouse"."analytics"."fct_hourly__dbt_tmp" rename to "fct_hourly"
+[0m16:59:57.332862 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:59:57.338334 [debug] [Thread-1 (]: On model.ontario_grid.fct_hourly: COMMIT
+[0m16:59:57.338728 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.fct_hourly"
+[0m16:59:57.339130 [debug] [Thread-1 (]: On model.ontario_grid.fct_hourly: COMMIT
+[0m16:59:57.345803 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m16:59:57.347791 [debug] [Thread-1 (]: Using duckdb connection "model.ontario_grid.fct_hourly"
+[0m16:59:57.348381 [debug] [Thread-1 (]: On model.ontario_grid.fct_hourly: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "model.ontario_grid.fct_hourly"} */
+
+      drop table if exists "warehouse"."analytics"."fct_hourly__dbt_backup" cascade
+    
+[0m16:59:57.350125 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.351657 [debug] [Thread-1 (]: On model.ontario_grid.fct_hourly: Close
+[0m16:59:57.352261 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f2cd8adb-d927-4ff6-84d6-d75d775271e0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0F454690>]}
+[0m16:59:57.352884 [info ] [Thread-1 (]: 8 of 12 OK created sql table model analytics.fct_hourly ........................ [[32mOK[0m in 0.10s]
+[0m16:59:57.353583 [debug] [Thread-1 (]: Finished running node model.ontario_grid.fct_hourly
+[0m16:59:57.354511 [debug] [Thread-1 (]: Began running node test.ontario_grid.demand_in_realistic_range
+[0m16:59:57.355042 [info ] [Thread-1 (]: 9 of 12 START test demand_in_realistic_range ................................... [RUN]
+[0m16:59:57.355747 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ontario_grid.fct_hourly, now test.ontario_grid.demand_in_realistic_range)
+[0m16:59:57.356176 [debug] [Thread-1 (]: Began compiling node test.ontario_grid.demand_in_realistic_range
+[0m16:59:57.357909 [debug] [Thread-1 (]: Writing injected SQL for node "test.ontario_grid.demand_in_realistic_range"
+[0m16:59:57.359125 [debug] [Thread-1 (]: Began executing node test.ontario_grid.demand_in_realistic_range
+[0m16:59:57.360757 [debug] [Thread-1 (]: Writing runtime sql for node "test.ontario_grid.demand_in_realistic_range"
+[0m16:59:57.361690 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.demand_in_realistic_range"
+[0m16:59:57.362082 [debug] [Thread-1 (]: On test.ontario_grid.demand_in_realistic_range: BEGIN
+[0m16:59:57.362444 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:59:57.363164 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.363566 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.demand_in_realistic_range"
+[0m16:59:57.363921 [debug] [Thread-1 (]: On test.ontario_grid.demand_in_realistic_range: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "test.ontario_grid.demand_in_realistic_range"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select *
+from "warehouse"."analytics"."fct_hourly"
+where ontario_demand_mw < 8000
+   or ontario_demand_mw > 30000
+  
+  
+      
+    ) dbt_internal_test
+[0m16:59:57.365302 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.367222 [debug] [Thread-1 (]: On test.ontario_grid.demand_in_realistic_range: ROLLBACK
+[0m16:59:57.367799 [debug] [Thread-1 (]: On test.ontario_grid.demand_in_realistic_range: Close
+[0m16:59:57.368398 [info ] [Thread-1 (]: 9 of 12 PASS demand_in_realistic_range ......................................... [[32mPASS[0m in 0.01s]
+[0m16:59:57.369069 [debug] [Thread-1 (]: Finished running node test.ontario_grid.demand_in_realistic_range
+[0m16:59:57.369487 [debug] [Thread-1 (]: Began running node test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a
+[0m16:59:57.370046 [info ] [Thread-1 (]: 10 of 12 START test not_null_fct_hourly_hour_start_utc ......................... [RUN]
+[0m16:59:57.370931 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ontario_grid.demand_in_realistic_range, now test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a)
+[0m16:59:57.371858 [debug] [Thread-1 (]: Began compiling node test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a
+[0m16:59:57.378350 [debug] [Thread-1 (]: Writing injected SQL for node "test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a"
+[0m16:59:57.379830 [debug] [Thread-1 (]: Began executing node test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a
+[0m16:59:57.381870 [debug] [Thread-1 (]: Writing runtime sql for node "test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a"
+[0m16:59:57.383104 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a"
+[0m16:59:57.383764 [debug] [Thread-1 (]: On test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a: BEGIN
+[0m16:59:57.384402 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:59:57.385507 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.386147 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a"
+[0m16:59:57.386783 [debug] [Thread-1 (]: On test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select hour_start_utc
+from "warehouse"."analytics"."fct_hourly"
+where hour_start_utc is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:59:57.388320 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.390424 [debug] [Thread-1 (]: On test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a: ROLLBACK
+[0m16:59:57.391029 [debug] [Thread-1 (]: On test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a: Close
+[0m16:59:57.391670 [info ] [Thread-1 (]: 10 of 12 PASS not_null_fct_hourly_hour_start_utc ............................... [[32mPASS[0m in 0.02s]
+[0m16:59:57.392366 [debug] [Thread-1 (]: Finished running node test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a
+[0m16:59:57.392780 [debug] [Thread-1 (]: Began running node test.ontario_grid.temperature_in_realistic_range
+[0m16:59:57.393341 [info ] [Thread-1 (]: 11 of 12 START test temperature_in_realistic_range ............................. [RUN]
+[0m16:59:57.393965 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ontario_grid.not_null_fct_hourly_hour_start_utc.9c3e95d02a, now test.ontario_grid.temperature_in_realistic_range)
+[0m16:59:57.394384 [debug] [Thread-1 (]: Began compiling node test.ontario_grid.temperature_in_realistic_range
+[0m16:59:57.396384 [debug] [Thread-1 (]: Writing injected SQL for node "test.ontario_grid.temperature_in_realistic_range"
+[0m16:59:57.397491 [debug] [Thread-1 (]: Began executing node test.ontario_grid.temperature_in_realistic_range
+[0m16:59:57.399141 [debug] [Thread-1 (]: Writing runtime sql for node "test.ontario_grid.temperature_in_realistic_range"
+[0m16:59:57.400152 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.temperature_in_realistic_range"
+[0m16:59:57.400530 [debug] [Thread-1 (]: On test.ontario_grid.temperature_in_realistic_range: BEGIN
+[0m16:59:57.400903 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:59:57.401577 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.401937 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.temperature_in_realistic_range"
+[0m16:59:57.402292 [debug] [Thread-1 (]: On test.ontario_grid.temperature_in_realistic_range: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "test.ontario_grid.temperature_in_realistic_range"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select *
+from "warehouse"."analytics"."fct_hourly"
+where temperature_c < -40
+   or temperature_c > 45
+  
+  
+      
+    ) dbt_internal_test
+[0m16:59:57.403433 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.404892 [debug] [Thread-1 (]: On test.ontario_grid.temperature_in_realistic_range: ROLLBACK
+[0m16:59:57.405452 [debug] [Thread-1 (]: On test.ontario_grid.temperature_in_realistic_range: Close
+[0m16:59:57.406022 [info ] [Thread-1 (]: 11 of 12 PASS temperature_in_realistic_range ................................... [[32mPASS[0m in 0.01s]
+[0m16:59:57.406673 [debug] [Thread-1 (]: Finished running node test.ontario_grid.temperature_in_realistic_range
+[0m16:59:57.407075 [debug] [Thread-1 (]: Began running node test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1
+[0m16:59:57.407544 [info ] [Thread-1 (]: 12 of 12 START test unique_fct_hourly_hour_start_utc ........................... [RUN]
+[0m16:59:57.408028 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ontario_grid.temperature_in_realistic_range, now test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1)
+[0m16:59:57.408473 [debug] [Thread-1 (]: Began compiling node test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1
+[0m16:59:57.415290 [debug] [Thread-1 (]: Writing injected SQL for node "test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1"
+[0m16:59:57.416346 [debug] [Thread-1 (]: Began executing node test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1
+[0m16:59:57.417938 [debug] [Thread-1 (]: Writing runtime sql for node "test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1"
+[0m16:59:57.418919 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1"
+[0m16:59:57.419339 [debug] [Thread-1 (]: On test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1: BEGIN
+[0m16:59:57.419682 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:59:57.420307 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:59:57.420664 [debug] [Thread-1 (]: Using duckdb connection "test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1"
+[0m16:59:57.421025 [debug] [Thread-1 (]: On test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ontario_grid", "target_name": "dev", "node_id": "test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    hour_start_utc as unique_field,
+    count(*) as n_records
+
+from "warehouse"."analytics"."fct_hourly"
+where hour_start_utc is not null
+group by hour_start_utc
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:59:57.424930 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m16:59:57.426466 [debug] [Thread-1 (]: On test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1: ROLLBACK
+[0m16:59:57.427044 [debug] [Thread-1 (]: On test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1: Close
+[0m16:59:57.427772 [info ] [Thread-1 (]: 12 of 12 PASS unique_fct_hourly_hour_start_utc ................................. [[32mPASS[0m in 0.02s]
+[0m16:59:57.428440 [debug] [Thread-1 (]: Finished running node test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1
+[0m16:59:57.430001 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:59:57.430403 [debug] [MainThread]: On master: BEGIN
+[0m16:59:57.430718 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:59:57.431244 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:59:57.431558 [debug] [MainThread]: On master: COMMIT
+[0m16:59:57.431857 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:59:57.432147 [debug] [MainThread]: On master: COMMIT
+[0m16:59:57.432626 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:59:57.432930 [debug] [MainThread]: On master: Close
+[0m16:59:57.433332 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:59:57.433608 [debug] [MainThread]: Connection 'create_warehouse_analytics' was properly closed.
+[0m16:59:57.433882 [debug] [MainThread]: Connection 'list_warehouse_analytics' was properly closed.
+[0m16:59:57.434147 [debug] [MainThread]: Connection 'test.ontario_grid.unique_fct_hourly_hour_start_utc.1e3e8b3dc1' was properly closed.
+[0m16:59:57.434474 [info ] [MainThread]: 
+[0m16:59:57.434856 [info ] [MainThread]: Finished running 1 table model, 9 data tests, 2 view models in 0 hours 0 minutes and 0.72 seconds (0.72s).
+[0m16:59:57.437064 [debug] [MainThread]: Command end result
+[0m16:59:57.470280 [debug] [MainThread]: Wrote artifact WritableManifest to D:\PROJECT\Electricity grid pipeline\dbt\target\manifest.json
+[0m16:59:57.474286 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\PROJECT\Electricity grid pipeline\dbt\target\semantic_manifest.json
+[0m16:59:57.477887 [debug] [MainThread]: Wrote artifact OsiDocument to D:\PROJECT\Electricity grid pipeline\dbt\target\osi_document.json
+[0m16:59:57.485745 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\PROJECT\Electricity grid pipeline\dbt\target\run_results.json
+[0m16:59:57.486089 [info ] [MainThread]: 
+[0m16:59:57.486518 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:59:57.486916 [info ] [MainThread]: 
+[0m16:59:57.487292 [info ] [MainThread]: Done. PASS=12 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=12
+[0m16:59:57.488246 [debug] [MainThread]: Command `dbt.EXE build` succeeded at 16:59:57.488131 after 5.65 seconds
+[0m16:59:57.488626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0EE581D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0EE5B350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D0D17DCC0>]}
+[0m16:59:57.489076 [debug] [MainThread]: Flushing usage events
+[0m17:00:07.933323 [debug] [MainThread]: An error was encountered while trying to flush usage events
