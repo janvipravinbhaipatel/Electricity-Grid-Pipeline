@@ -13,6 +13,7 @@ permissions:
 jobs:
   pipeline:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Check out the code
         uses: actions/checkout@v4
@@ -26,6 +27,14 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
+
+      - name: Restore weather history from cache
+        uses: actions/cache@v4
+        with:
+          path: data/raw/weather_history
+          key: weather-${{ github.run_id }}
+          restore-keys: |
+            weather-
 
       - name: Download history
         run: python backfill.py
