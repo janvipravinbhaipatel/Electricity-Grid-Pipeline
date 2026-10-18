@@ -1,14 +1,15 @@
+
 name: Daily pipeline
 
 on:
   schedule:
-    - cron: "0 13 * * *"     # every day at 13:00 UTC = 9:00 a.m. in Toronto (summer time)
-  workflow_dispatch:          # adds a "Run workflow" button on GitHub
+    - cron: "0 13 * * *"
+  workflow_dispatch:
   push:
-    branches: [main]          # also runs on every push, as a test
+    branches: [main]
 
 permissions:
-  contents: write             # lets the workflow commit the refreshed data
+  contents: write
 
 jobs:
   pipeline:
@@ -33,7 +34,7 @@ jobs:
       - name: Download history
         run: python backfill.py
 
-          - name: Clear stale dbt artifacts
+      - name: Clear stale dbt artifacts
         run: |
           rm -rf dbt/target dbt/logs
 
