@@ -1,10 +1,11 @@
 
+  
+    
     
 
     create  table
       "warehouse"."analytics"."fct_hourly__dbt_tmp"
   
-    
     as (
       select
     d.hour_start_utc,
@@ -19,5 +20,5 @@ from "warehouse"."analytics"."stg_demand" d
 left join "warehouse"."analytics"."stg_weather" w
     on w.time_utc = d.hour_start_utc
     );
-    
+  
   
