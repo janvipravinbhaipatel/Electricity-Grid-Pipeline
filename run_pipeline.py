@@ -1,17 +1,26 @@
-
 """
-Runs the full pipeline: ingest -> load -> dbt build -> export.
+Runs the full pipeline: ingest -> load -> dbt build -> export -> forecast.
 Stops at the first failure and logs output to logs/pipeline.log.
+
+Usage:
+    python run_pipeline.py
 """
 
 import logging
 import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
 
 PROJECT_DIR = Path(__file__).resolve().parent
 LOG_FILE = PROJECT_DIR / "logs" / "pipeline.log"
+
+# Use the dbt installed next to this Python (inside .venv on the laptop,
+# inside the runner's Python on GitHub Actions).
+DBT = (shutil.which("dbt", path=str(Path(sys.executable).parent))
+       or shutil.which("dbt")
+       or "dbt")
 
 
 def setup_logging() -> None:
@@ -28,30 +37,17 @@ def setup_logging() -> None:
 
 
 def run_step(name: str, command: list[str]) -> None:
-    """Run one pipeline step and stop if it fails."""
+    """Run one pipeline step as its own program and stop if it fails."""
     logging.info("Starting %s", name)
+    result = subprocess.run(command, cwd=PROJECT_DIR, capture_output=True, text=True)
 
-    result = subprocess.run(
-        command,
-        cwd=PROJECT_DIR,
-        capture_output=True,
-        text=True,
-    )
-
-    if result.stdout:
-        for line in result.stdout.splitlines():
-            logging.info("  %s", line)
+    for line in result.stdout.splitlines():
+        logging.info("  %s", line)
 
     if result.returncode != 0:
         if result.stderr:
-            logging.error("%s", result.stderr.strip())
-        if result.stdout:
-            logging.error("%s", result.stdout.strip())
+            logging.error("%s failed:\n%s", name, result.stderr.strip())
         raise SystemExit(result.returncode)
-
-    if result.stderr:
-        for line in result.stderr.splitlines():
-            logging.info("  %s", line)
 
     logging.info("Finished %s", name)
 
@@ -59,34 +55,18 @@ def run_step(name: str, command: list[str]) -> None:
 def main() -> None:
     os.chdir(PROJECT_DIR)
     setup_logging()
-
     logging.info("===== Pipeline run started =====")
 
-    # Verify dbt is installed in the active Python environment.
-    run_step(
-        "dbt version check",
-        [sys.executable, "-m", "dbt.cli.main", "--version"],
-    )
-
+    run_step("dbt version check", [DBT, "--version"])
     run_step("ingest", [sys.executable, "ingest.py"])
-
     run_step("load", [sys.executable, "load.py"])
-
-    run_step(
-        "dbt build",
-        [
-            sys.executable,
-            "-m",
-            "dbt.cli.main",
-            "build",
-            "--project-dir",
-            str(PROJECT_DIR / "dbt"),
-            "--profiles-dir",
-            str(PROJECT_DIR / "dbt"),
-        ],
-    )
-
+    run_step("dbt build", [DBT, "build",
+                           "--project-dir", str(PROJECT_DIR / "dbt"),
+                           "--profiles-dir", str(PROJECT_DIR / "dbt")])
     run_step("export", [sys.executable, "export.py"])
+
+    if (PROJECT_DIR / "forecast" / "train.py").exists():
+        run_step("forecast", [sys.executable, "forecast/train.py"])
 
     logging.info("===== Pipeline run finished successfully =====")
 

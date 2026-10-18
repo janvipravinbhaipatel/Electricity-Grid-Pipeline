@@ -271,3 +271,198 @@
 2026-10-18 16:54:13,830  INFO       Exported 24,504 rows to dashboard\fct_hourly.parquet
 2026-10-18 16:54:13,830  INFO     Finished export
 2026-10-18 16:54:13,830  INFO     ===== Pipeline run finished successfully =====
+2026-10-18 17:46:21,772  INFO     ===== Pipeline run started =====
+2026-10-18 17:46:21,773  INFO     Starting dbt version check
+2026-10-18 17:46:31,780  INFO       Core:
+2026-10-18 17:46:31,781  INFO         - installed: 1.10.19
+2026-10-18 17:46:31,781  INFO         - latest:    1.12.6  - Update available!
+2026-10-18 17:46:31,781  INFO       
+2026-10-18 17:46:31,782  INFO         Your version of dbt-core is out of date!
+2026-10-18 17:46:31,782  INFO         You can find instructions for upgrading here:
+2026-10-18 17:46:31,782  INFO         https://docs.getdbt.com/docs/installation
+2026-10-18 17:46:31,782  INFO       
+2026-10-18 17:46:31,782  INFO       Plugins:
+2026-10-18 17:46:31,783  INFO         - duckdb: 1.10.1 - Update available!
+2026-10-18 17:46:31,783  INFO       
+2026-10-18 17:46:31,783  INFO         At least one plugin is out of date with dbt-core.
+2026-10-18 17:46:31,783  INFO         You can find instructions for upgrading here:
+2026-10-18 17:46:31,784  INFO         https://docs.getdbt.com/docs/installation
+2026-10-18 17:46:31,784  INFO       
+2026-10-18 17:46:31,784  INFO       
+2026-10-18 17:46:31,784  INFO       <frozen runpy>:128: RuntimeWarning: 'dbt.cli.main' found in sys.modules after import of package 'dbt.cli', but prior to execution of 'dbt.cli.main'; this may result in unpredictable behaviour
+2026-10-18 17:46:31,784  INFO     Finished dbt version check
+2026-10-18 17:46:31,784  INFO     Starting ingest
+2026-10-18 17:46:34,001  INFO       Demand:  291 days in file -> data\raw\demand\PUB_Demand_2026.csv
+2026-10-18 17:46:34,002  INFO                2026-10-17 has 24 hourly records
+2026-10-18 17:46:34,002  INFO       Weather: 24 hourly records -> data\raw\weather\2026-10-17.json
+2026-10-18 17:46:34,002  INFO     Finished ingest
+2026-10-18 17:46:34,002  INFO     Starting load
+2026-10-18 17:46:35,058  INFO       Data quality
+2026-10-18 17:46:35,058  INFO         Raw demand rows               24,504
+2026-10-18 17:46:35,059  INFO         Duplicate hours removed            0
+2026-10-18 17:46:35,059  INFO         Days without 24 hours              2
+2026-10-18 17:46:35,059  INFO         Hours with no temperature         78
+2026-10-18 17:46:35,059  INFO         Hours in fct_hourly           24,504
+2026-10-18 17:46:35,060  INFO       
+2026-10-18 17:46:35,060  INFO       Average Ontario demand by temperature (5 degree bands)
+2026-10-18 17:46:35,060  INFO         Temp (C)      Avg MW   Hours
+2026-10-18 17:46:35,060  INFO         -25 to -20     18,936      45
+2026-10-18 17:46:35,061  INFO         -20 to -15     19,222     140
+2026-10-18 17:46:35,061  INFO         -15 to -10     18,674     667
+2026-10-18 17:46:35,061  INFO         -10 to -5      18,215   1,419
+2026-10-18 17:46:35,061  INFO          -5 to 0       17,269   2,790
+2026-10-18 17:46:35,062  INFO           0 to 5       16,347   3,641
+2026-10-18 17:46:35,062  INFO           5 to 10      15,053   3,149
+2026-10-18 17:46:35,062  INFO          10 to 15      14,321   3,035
+2026-10-18 17:46:35,062  INFO          15 to 20      15,071   4,267
+2026-10-18 17:46:35,062  INFO          20 to 25      17,618   3,853
+2026-10-18 17:46:35,063  INFO          25 to 30      20,559   1,263
+2026-10-18 17:46:35,063  INFO          30 to 35      23,114     143
+2026-10-18 17:46:35,063  INFO          35 to 40      24,303      14
+2026-10-18 17:46:35,064  INFO       
+2026-10-18 17:46:35,064  INFO       Database saved to data\warehouse.duckdb
+2026-10-18 17:46:35,064  INFO     Finished load
+2026-10-18 17:46:35,064  INFO     Starting dbt build
+2026-10-18 17:46:47,133  INFO       21:46:42  Running with dbt=1.10.19
+2026-10-18 17:46:47,133  INFO       21:46:43  Registered adapter: duckdb=1.10.1
+2026-10-18 17:46:47,133  INFO       21:46:44  Found 3 models, 9 data tests, 2 sources, 486 macros
+2026-10-18 17:46:47,133  INFO       21:46:44  
+2026-10-18 17:46:47,134  INFO       21:46:44  Concurrency: 1 threads (target='dev')
+2026-10-18 17:46:47,134  INFO       21:46:44  
+2026-10-18 17:46:47,134  INFO       21:46:44  1 of 12 START sql view model analytics.stg_demand .............................. [RUN]
+2026-10-18 17:46:47,134  INFO       21:46:45  1 of 12 OK created sql view model analytics.stg_demand ......................... [OK in 0.11s]
+2026-10-18 17:46:47,134  INFO       21:46:45  2 of 12 START sql view model analytics.stg_weather ............................. [RUN]
+2026-10-18 17:46:47,135  INFO       21:46:45  2 of 12 OK created sql view model analytics.stg_weather ........................ [OK in 0.04s]
+2026-10-18 17:46:47,135  INFO       21:46:45  3 of 12 START test not_null_stg_demand_hour_start_utc .......................... [RUN]
+2026-10-18 17:46:47,135  INFO       21:46:45  3 of 12 PASS not_null_stg_demand_hour_start_utc ................................ [PASS in 0.22s]
+2026-10-18 17:46:47,135  INFO       21:46:45  4 of 12 START test not_null_stg_demand_ontario_demand_mw ....................... [RUN]
+2026-10-18 17:46:47,135  INFO       21:46:45  4 of 12 PASS not_null_stg_demand_ontario_demand_mw ............................. [PASS in 0.02s]
+2026-10-18 17:46:47,135  INFO       21:46:45  5 of 12 START test unique_stg_demand_hour_start_utc ............................ [RUN]
+2026-10-18 17:46:47,136  INFO       21:46:45  5 of 12 PASS unique_stg_demand_hour_start_utc .................................. [PASS in 0.05s]
+2026-10-18 17:46:47,136  INFO       21:46:45  6 of 12 START test not_null_stg_weather_time_utc ............................... [RUN]
+2026-10-18 17:46:47,136  INFO       21:46:45  6 of 12 PASS not_null_stg_weather_time_utc ..................................... [PASS in 0.02s]
+2026-10-18 17:46:47,136  INFO       21:46:45  7 of 12 START test unique_stg_weather_time_utc ................................. [RUN]
+2026-10-18 17:46:47,136  INFO       21:46:45  7 of 12 PASS unique_stg_weather_time_utc ....................................... [PASS in 0.03s]
+2026-10-18 17:46:47,136  INFO       21:46:45  8 of 12 START sql table model analytics.fct_hourly ............................. [RUN]
+2026-10-18 17:46:47,137  INFO       21:46:45  8 of 12 OK created sql table model analytics.fct_hourly ........................ [OK in 0.10s]
+2026-10-18 17:46:47,137  INFO       21:46:45  9 of 12 START test demand_in_realistic_range ................................... [RUN]
+2026-10-18 17:46:47,137  INFO       21:46:45  9 of 12 PASS demand_in_realistic_range ......................................... [PASS in 0.02s]
+2026-10-18 17:46:47,137  INFO       21:46:45  10 of 12 START test not_null_fct_hourly_hour_start_utc ......................... [RUN]
+2026-10-18 17:46:47,137  INFO       21:46:45  10 of 12 PASS not_null_fct_hourly_hour_start_utc ............................... [PASS in 0.02s]
+2026-10-18 17:46:47,138  INFO       21:46:45  11 of 12 START test temperature_in_realistic_range ............................. [RUN]
+2026-10-18 17:46:47,138  INFO       21:46:45  11 of 12 PASS temperature_in_realistic_range ................................... [PASS in 0.01s]
+2026-10-18 17:46:47,138  INFO       21:46:45  12 of 12 START test unique_fct_hourly_hour_start_utc ........................... [RUN]
+2026-10-18 17:46:47,138  INFO       21:46:45  12 of 12 PASS unique_fct_hourly_hour_start_utc ................................. [PASS in 0.02s]
+2026-10-18 17:46:47,138  INFO       21:46:45  
+2026-10-18 17:46:47,138  INFO       21:46:45  Finished running 1 table model, 9 data tests, 2 view models in 0 hours 0 minutes and 1.17 seconds (1.17s).
+2026-10-18 17:46:47,139  INFO       21:46:45  
+2026-10-18 17:46:47,139  INFO       21:46:45  Completed successfully
+2026-10-18 17:46:47,139  INFO       21:46:45  
+2026-10-18 17:46:47,139  INFO       21:46:45  Done. PASS=12 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=12
+2026-10-18 17:46:47,139  INFO       <frozen runpy>:128: RuntimeWarning: 'dbt.cli.main' found in sys.modules after import of package 'dbt.cli', but prior to execution of 'dbt.cli.main'; this may result in unpredictable behaviour
+2026-10-18 17:46:47,139  INFO     Finished dbt build
+2026-10-18 17:46:47,140  INFO     Starting export
+2026-10-18 17:46:47,570  INFO       Exported 24,504 rows to dashboard\fct_hourly.parquet
+2026-10-18 17:46:47,570  INFO     Finished export
+2026-10-18 17:46:47,570  INFO     ===== Pipeline run finished successfully =====
+2026-10-18 17:52:52,475  INFO     ===== Pipeline run started =====
+2026-10-18 17:52:52,476  INFO     Starting dbt version check
+2026-10-18 17:53:02,439  INFO       Core:
+2026-10-18 17:53:02,439  INFO         - installed: 1.10.19
+2026-10-18 17:53:02,439  INFO         - latest:    1.12.6  - Update available!
+2026-10-18 17:53:02,440  INFO       
+2026-10-18 17:53:02,440  INFO         Your version of dbt-core is out of date!
+2026-10-18 17:53:02,440  INFO         You can find instructions for upgrading here:
+2026-10-18 17:53:02,440  INFO         https://docs.getdbt.com/docs/installation
+2026-10-18 17:53:02,441  INFO       
+2026-10-18 17:53:02,441  INFO       Plugins:
+2026-10-18 17:53:02,441  INFO         - duckdb: 1.10.1 - Update available!
+2026-10-18 17:53:02,441  INFO       
+2026-10-18 17:53:02,442  INFO         At least one plugin is out of date with dbt-core.
+2026-10-18 17:53:02,442  INFO         You can find instructions for upgrading here:
+2026-10-18 17:53:02,442  INFO         https://docs.getdbt.com/docs/installation
+2026-10-18 17:53:02,442  INFO       
+2026-10-18 17:53:02,443  INFO       
+2026-10-18 17:53:02,443  INFO     Finished dbt version check
+2026-10-18 17:53:02,443  INFO     Starting ingest
+2026-10-18 17:53:05,430  INFO       Demand:  291 days in file -> data\raw\demand\PUB_Demand_2026.csv
+2026-10-18 17:53:05,430  INFO                2026-10-17 has 24 hourly records
+2026-10-18 17:53:05,430  INFO       Weather: 24 hourly records -> data\raw\weather\2026-10-17.json
+2026-10-18 17:53:05,431  INFO     Finished ingest
+2026-10-18 17:53:05,431  INFO     Starting load
+2026-10-18 17:53:06,467  INFO       Data quality
+2026-10-18 17:53:06,467  INFO         Raw demand rows               24,504
+2026-10-18 17:53:06,468  INFO         Duplicate hours removed            0
+2026-10-18 17:53:06,468  INFO         Days without 24 hours              2
+2026-10-18 17:53:06,468  INFO         Hours with no temperature         78
+2026-10-18 17:53:06,468  INFO         Hours in fct_hourly           24,504
+2026-10-18 17:53:06,469  INFO       
+2026-10-18 17:53:06,469  INFO       Average Ontario demand by temperature (5 degree bands)
+2026-10-18 17:53:06,469  INFO         Temp (C)      Avg MW   Hours
+2026-10-18 17:53:06,469  INFO         -25 to -20     18,936      45
+2026-10-18 17:53:06,469  INFO         -20 to -15     19,222     140
+2026-10-18 17:53:06,470  INFO         -15 to -10     18,674     667
+2026-10-18 17:53:06,470  INFO         -10 to -5      18,215   1,419
+2026-10-18 17:53:06,470  INFO          -5 to 0       17,269   2,790
+2026-10-18 17:53:06,471  INFO           0 to 5       16,347   3,641
+2026-10-18 17:53:06,471  INFO           5 to 10      15,053   3,149
+2026-10-18 17:53:06,471  INFO          10 to 15      14,321   3,035
+2026-10-18 17:53:06,471  INFO          15 to 20      15,071   4,267
+2026-10-18 17:53:06,472  INFO          20 to 25      17,618   3,853
+2026-10-18 17:53:06,472  INFO          25 to 30      20,559   1,263
+2026-10-18 17:53:06,472  INFO          30 to 35      23,114     143
+2026-10-18 17:53:06,472  INFO          35 to 40      24,303      14
+2026-10-18 17:53:06,472  INFO       
+2026-10-18 17:53:06,473  INFO       Database saved to data\warehouse.duckdb
+2026-10-18 17:53:06,473  INFO     Finished load
+2026-10-18 17:53:06,473  INFO     Starting dbt build
+2026-10-18 17:53:17,123  INFO       21:53:13  Running with dbt=1.10.19
+2026-10-18 17:53:17,123  INFO       21:53:14  Registered adapter: duckdb=1.10.1
+2026-10-18 17:53:17,123  INFO       21:53:15  Found 3 models, 9 data tests, 2 sources, 486 macros
+2026-10-18 17:53:17,124  INFO       21:53:15  
+2026-10-18 17:53:17,124  INFO       21:53:15  Concurrency: 1 threads (target='dev')
+2026-10-18 17:53:17,124  INFO       21:53:15  
+2026-10-18 17:53:17,124  INFO       21:53:15  1 of 12 START sql view model analytics.stg_demand .............................. [RUN]
+2026-10-18 17:53:17,124  INFO       21:53:15  1 of 12 OK created sql view model analytics.stg_demand ......................... [OK in 0.08s]
+2026-10-18 17:53:17,124  INFO       21:53:15  2 of 12 START sql view model analytics.stg_weather ............................. [RUN]
+2026-10-18 17:53:17,124  INFO       21:53:15  2 of 12 OK created sql view model analytics.stg_weather ........................ [OK in 0.03s]
+2026-10-18 17:53:17,125  INFO       21:53:15  3 of 12 START test not_null_stg_demand_hour_start_utc .......................... [RUN]
+2026-10-18 17:53:17,125  INFO       21:53:15  3 of 12 PASS not_null_stg_demand_hour_start_utc ................................ [PASS in 0.04s]
+2026-10-18 17:53:17,125  INFO       21:53:15  4 of 12 START test not_null_stg_demand_ontario_demand_mw ....................... [RUN]
+2026-10-18 17:53:17,125  INFO       21:53:15  4 of 12 PASS not_null_stg_demand_ontario_demand_mw ............................. [PASS in 0.02s]
+2026-10-18 17:53:17,125  INFO       21:53:15  5 of 12 START test unique_stg_demand_hour_start_utc ............................ [RUN]
+2026-10-18 17:53:17,125  INFO       21:53:15  5 of 12 PASS unique_stg_demand_hour_start_utc .................................. [PASS in 0.04s]
+2026-10-18 17:53:17,125  INFO       21:53:15  6 of 12 START test not_null_stg_weather_time_utc ............................... [RUN]
+2026-10-18 17:53:17,126  INFO       21:53:15  6 of 12 PASS not_null_stg_weather_time_utc ..................................... [PASS in 0.14s]
+2026-10-18 17:53:17,126  INFO       21:53:15  7 of 12 START test unique_stg_weather_time_utc ................................. [RUN]
+2026-10-18 17:53:17,126  INFO       21:53:15  7 of 12 PASS unique_stg_weather_time_utc ....................................... [PASS in 0.03s]
+2026-10-18 17:53:17,126  INFO       21:53:15  8 of 12 START sql table model analytics.fct_hourly ............................. [RUN]
+2026-10-18 17:53:17,126  INFO       21:53:15  8 of 12 OK created sql table model analytics.fct_hourly ........................ [OK in 0.10s]
+2026-10-18 17:53:17,126  INFO       21:53:15  9 of 12 START test demand_in_realistic_range ................................... [RUN]
+2026-10-18 17:53:17,126  INFO       21:53:15  9 of 12 PASS demand_in_realistic_range ......................................... [PASS in 0.01s]
+2026-10-18 17:53:17,126  INFO       21:53:15  10 of 12 START test not_null_fct_hourly_hour_start_utc ......................... [RUN]
+2026-10-18 17:53:17,127  INFO       21:53:15  10 of 12 PASS not_null_fct_hourly_hour_start_utc ............................... [PASS in 0.01s]
+2026-10-18 17:53:17,127  INFO       21:53:15  11 of 12 START test temperature_in_realistic_range ............................. [RUN]
+2026-10-18 17:53:17,127  INFO       21:53:15  11 of 12 PASS temperature_in_realistic_range ................................... [PASS in 0.01s]
+2026-10-18 17:53:17,127  INFO       21:53:15  12 of 12 START test unique_fct_hourly_hour_start_utc ........................... [RUN]
+2026-10-18 17:53:17,127  INFO       21:53:15  12 of 12 PASS unique_fct_hourly_hour_start_utc ................................. [PASS in 0.02s]
+2026-10-18 17:53:17,127  INFO       21:53:15  
+2026-10-18 17:53:17,127  INFO       21:53:15  Finished running 1 table model, 9 data tests, 2 view models in 0 hours 0 minutes and 0.80 seconds (0.80s).
+2026-10-18 17:53:17,127  INFO       21:53:15  
+2026-10-18 17:53:17,127  INFO       21:53:15  Completed successfully
+2026-10-18 17:53:17,127  INFO       21:53:15  
+2026-10-18 17:53:17,128  INFO       21:53:15  Done. PASS=12 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=12
+2026-10-18 17:53:17,128  INFO     Finished dbt build
+2026-10-18 17:53:17,128  INFO     Starting export
+2026-10-18 17:53:17,603  INFO       Exported 24,504 rows to dashboard\fct_hourly.parquet
+2026-10-18 17:53:17,604  INFO     Finished export
+2026-10-18 17:53:17,604  INFO     Starting forecast
+2026-10-18 17:53:31,716  INFO       Training hours: 22,174   Test hours: 2,083
+2026-10-18 17:53:31,716  INFO       
+2026-10-18 17:53:31,716  INFO       Baseline (same hour last week) MAPE: 7.53%
+2026-10-18 17:53:31,716  INFO       Model MAPE:                          4.09%
+2026-10-18 17:53:31,716  INFO       Improvement over baseline:           46%
+2026-10-18 17:53:31,716  INFO       
+2026-10-18 17:53:31,717  INFO       Saved test-period forecasts to dashboard/forecast_test.parquet
+2026-10-18 17:53:31,717  INFO     Finished forecast
+2026-10-18 17:53:31,717  INFO     ===== Pipeline run finished successfully =====
