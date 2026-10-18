@@ -1,12 +1,11 @@
 
 """
-Runs the full pipeline: ingest -> load -> dbt build.
+Runs the full pipeline: ingest -> load -> dbt build -> export.
 Stops at the first failure and logs output to logs/pipeline.log.
 """
 
 import logging
 import os
-import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -63,27 +62,31 @@ def main() -> None:
 
     logging.info("===== Pipeline run started =====")
 
-    dbt_executable = shutil.which("dbt")
-    if not dbt_executable:
-        logging.error(
-            "dbt executable not found. Check that dbt is installed "
-            "and available on your PATH."
-        )
-        raise SystemExit(1)
+    # Verify dbt is installed in the active Python environment.
+    run_step(
+        "dbt version check",
+        [sys.executable, "-m", "dbt.cli.main", "--version"],
+    )
 
     run_step("ingest", [sys.executable, "ingest.py"])
+
     run_step("load", [sys.executable, "load.py"])
+
     run_step(
         "dbt build",
         [
-            dbt_executable,
+            sys.executable,
+            "-m",
+            "dbt.cli.main",
             "build",
-            "--project-dir", str(PROJECT_DIR / "dbt"),
-            "--profiles-dir", str(PROJECT_DIR / "dbt"),
-        ]
+            "--project-dir",
+            str(PROJECT_DIR / "dbt"),
+            "--profiles-dir",
+            str(PROJECT_DIR / "dbt"),
+        ],
     )
+
     run_step("export", [sys.executable, "export.py"])
-    
 
     logging.info("===== Pipeline run finished successfully =====")
 
