@@ -73,12 +73,13 @@ week, month, temperature and demand at the same hour one week earlier.
 
 | Method | Error (MAPE) on the last 90 days |
 |---|---|
-| Baseline: same hour last week | 7.58% |
-| Model | **4.07%** |
+| Baseline: same hour last week | 7.53% |
+| Model | **4.09%** |
 
-The model cuts the forecast error by 46% compared with the baseline. It was trained only
-on older data and tested on 90 days it never saw. The test uses actual temperatures, so
-accuracy with a real weather forecast would be somewhat lower.
+The model cuts the forecast error by 46% compared with the baseline (results as of
+October 2026; the model retrains daily, so the live dashboard shows the latest figures).
+It was trained only on older data and tested on 90 days it never saw. The test uses
+actual temperatures, so accuracy with a real weather forecast would be somewhat lower.
 
 ## Design decisions
 
