@@ -4,7 +4,7 @@ An automated data pipeline that collects Ontario's hourly electricity demand and
 weather, models it with dbt in DuckDB, tests data quality on every run, and analyses how
 temperature drives electricity use.
 
-**Live dashboard:** TODO (added after publishing)
+**Live dashboard:** https://electricity-grid-pipeline-z2wghoxgsy4vcisjqh7hcd.streamlit.app/
 
 ## Architecture
 
