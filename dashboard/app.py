@@ -83,5 +83,3 @@ by_day = query("""
 """, year)
 st.line_chart(by_day, x="day", y="avg_demand_mw", color=COLOR,
               x_label="Date", y_label="Average demand (MW)")
-
- 
