@@ -80,8 +80,10 @@ def main() -> None:
             "build",
             "--project-dir", str(PROJECT_DIR / "dbt"),
             "--profiles-dir", str(PROJECT_DIR / "dbt"),
-        ],
+        ]
     )
+    run_step("export", [sys.executable, "export.py"])
+    
 
     logging.info("===== Pipeline run finished successfully =====")
 
