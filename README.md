@@ -46,11 +46,16 @@ Coverage: January 2024 to today, about 24,000 hours.
 9 data tests run on every build: unique and non-null hours, plus realistic ranges for
 demand (8,000 to 30,000 MW) and temperature (-40 to 45°C).
 
-## Key findings
+ ## Key findings
 
-- **Demand follows a U shape against temperature:** highest in cold weather (heating),
-  lowest around TODO°C, and rising again in heat (air conditioning).
-- **Daily pattern:** demand is lowest around TODO and peaks around TODO.
+- **Heat drives demand more than cold.** Average demand is lowest at 10 to 15°C
+  (about 14,300 MW), rises to about 19,300 MW in the coldest hours, and to about
+  24,300 MW above 35°C, roughly 70% above the mild-weather level. A likely reason is that
+  much of Ontario's heating uses natural gas, while air conditioning runs on electricity.
+- **Daily pattern:** demand is lowest around 3 to 4 a.m. (about 14,000 MW) and peaks
+  around 5 to 6 p.m. Eastern Standard Time (about 18,600 MW).
+- **Seasonal pattern:** the highest daily peaks come in July each year, with smaller
+  winter peaks and the lowest demand in spring and autumn.
 - **Data quality:** the pipeline's checks found missing hours in IESO's published data
   for 1 May 2025.
 
