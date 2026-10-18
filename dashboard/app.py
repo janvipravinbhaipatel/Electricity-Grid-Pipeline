@@ -10,7 +10,9 @@ from pathlib import Path
 import duckdb
 import streamlit as st
 
-DATA = (Path(__file__).parent / "fct_hourly.parquet").as_posix()
+HERE = Path(__file__).parent
+DATA = (HERE / "fct_hourly.parquet").as_posix()
+FORECAST = HERE / "forecast_test.parquet"
 COLOR = "#E4572E"   # one accent color used in every chart
 
 st.set_page_config(page_title="Ontario Grid Demand", layout="wide")
@@ -30,7 +32,7 @@ def query(sql: str, year: str = "All years"):
 # ---- Sidebar filter ------------------------------------------------------
 years = query("SELECT DISTINCT year(date_est) AS y FROM {data} ORDER BY 1")["y"]
 year = st.sidebar.selectbox("Year", ["All years"] + [str(y) for y in years])
-st.sidebar.caption("Filters every number and chart on the page.")
+st.sidebar.caption("Filters every number and chart except the forecast.")
 
 # ---- Headline numbers --------------------------------------------------
 kpi = query("""
@@ -99,3 +101,32 @@ st.line_chart(by_daytype, x="hour", y=["Weekday", "Weekend"],
               color=[COLOR, "#9AA0A6"],
               x_label="Hour ending (Eastern Standard Time)",
               y_label="Average demand (MW)")
+
+# ---- Chart 5: forecast vs actual ----------------------------------------
+if FORECAST.exists():
+    f = FORECAST.as_posix()
+    st.subheader("Forecast vs actual demand")
+
+    errors = duckdb.sql(f"""
+        SELECT avg(abs(ontario_demand_mw - forecast_mw) / ontario_demand_mw) * 100 AS model,
+               avg(abs(ontario_demand_mw - baseline_mw) / ontario_demand_mw) * 100 AS baseline
+        FROM '{f}'
+    """).df().iloc[0]
+    m1, m2 = st.columns(2)
+    m1.metric("Model error (MAPE)", f"{errors.model:.1f}%")
+    m2.metric("Baseline error: same hour last week", f"{errors.baseline:.1f}%")
+
+    last_two_weeks = duckdb.sql(f"""
+        SELECT hour_start_utc AS hour,
+               ontario_demand_mw AS Actual,
+               forecast_mw       AS Forecast
+        FROM '{f}'
+        WHERE hour_start_utc > (SELECT max(hour_start_utc) FROM '{f}') - INTERVAL 14 DAY
+        ORDER BY 1
+    """).df()
+    st.line_chart(last_two_weeks, x="hour", y=["Actual", "Forecast"],
+                  color=["#9AA0A6", COLOR],
+                  x_label="Hour (UTC)", y_label="Demand (MW)")
+    st.caption("The model was trained on older data and tested on the last 90 days, "
+               "which it never saw. It uses actual temperatures, so accuracy with a "
+               "real weather forecast would be somewhat lower.")
